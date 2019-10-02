@@ -1,0 +1,660 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* ----------------------Custom----------------------*/
+
+/* Common */
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 24px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Private */
+
+.header {
+  background-color: #24292E;
+  grid-area: header;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  grid-area: main;
+  min-height: 900px;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: grid;
+  grid-auto-rows: 70px 900px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+.main-menu {
+  padding-left: 0;
+}
+
+.main-menu:hover {
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.nav-links {
+  padding: 0;
+}
+
+.link {
+  padding-left: 50px;
+  color: #0088a9;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+}
+
+.link:hover {
+  color: #4CAF50;
+}
+
+.logout {
+  padding: 9px 25px;
+  background-color: #0088a9;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.logout:hover {
+  background-color: #4CAF50;
+}
+
+.actions {
+  margin: 50px auto 10px auto;
+}
+
+.main-actions {
+  width: 1200px;
+  margin: 50px auto 10px auto;
+}
+
+.table {
+  width: 1200px;
+  margin: 20px auto auto auto;
+}
+
+.add {
+  width: 120px;
+  padding: 7px 17px;
+  background-color: #0088a9;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.add:hover {
+  background-color: #4CAF50;
+}
+
+.table td {
+  padding: 14px;
+}
+
+.btn-danger {
+  background-color: white;
+  border: 0 solid white;
+  border-radius: 30px;
+  color: #dc3545;
+  transition: all 0.1s ease 0s;
+}
+
+.btn-light {
+  color: #0088a9;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-light:hover {
+  color: #4CAF50;
+}
+
+.btn-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.fas {
+  font-size: 20px;
+}
+
+.date {
+  color: #888888;
+}
+
+.main-form {
+  width: 1200px;
+  margin: 50px auto 30px auto;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin-right: 10px;
+  border: none;
+  background-color: #0088a9;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+
+.form-label {
+  margin-bottom: 5px;
+  font-size: 1.4em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 0;
+}
+
+.form-control {
+  max-height: 300px;
+  min-height: 24px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.addition {
+  background-color: white;
+}
+
+.btn-tag-remove {
+  background-color: rgba(255,255,255,0.01);
+  border: none;
+  transition: all 0.3s ease 0s;
+}
+
+.tag:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.btn-tag-add {
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+}
+
+/* Public */
+
+.dialog-window {
+  max-width: 800px;
+  padding: 75px 24px;
+  margin: 0 auto;
+}
+
+.question-box {
+  padding-top: 20px;
+}
+
+.question-text {
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.question-info {
+  text-align: center;
+  font-size: 2.8em;
+}
+
+.option {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.check {
+  border-radius: 20px;
+  padding-left: 1.2em;
+  margin-bottom: 1.1em;
+}
+
+.radio-input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.radio-box {
+  position: absolute;
+  margin-left: -1.2em;
+  width: 1em;
+  height: 1em;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.radio-input:checked + .radio-box {
+  background-color: #4CAF50;
+}
+
+.radio-input:hover + .radio-box {
+  background-color: tomato;
+}
+
+.radio-box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check input:checked ~ .radio-box:after {
+  display: block;
+}
+
+.check .radio-box:after {
+  top: 8px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.back-button, .submit-button {
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.back-button {
+  padding: 0.35em 1.45em 0.35em 1.45em;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 0.2em;
+}
+
+.submit-button {
+  padding: 0.35em 1em 0.35em 1em;
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid white;
+  margin-right: 0.2em;
+}
+
+/* Public Media */
+
+@media screen and (max-width: 850px){
+  .question-text {
+    font-size: 1.2em;
+  }
+
+  .question-info {
+    font-size: 1.8em;
+  }
+
+  .check, .buttons{
+    font-size: 16px;
+  }
+
+  .check .radio-box:after {
+    top: 4px;
+    left: 4px;
+  }
+}
+
+@media screen and (max-width: 250px){
+  .question-info {
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .submit-button {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .back-button {
+    margin-left: 0;
+  }
+}
+
+/* Private Media */
+
+@media screen and (max-width: 1367px){
+  .main-form {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 1281px){
+  .main-actions {
+    width: 700px;
+  }
+
+  .table {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 1025px){
+  .main-form {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 685px){
+  .main-form {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .main-container {
+    grid-auto-rows: 120px 900px;
+  }
+}
