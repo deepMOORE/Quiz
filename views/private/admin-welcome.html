@@ -9,35 +9,51 @@
 
   <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
   <link rel="manifest" href="site.webmanifest">
-
-  <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="../../css/style.css">
+
   <meta name="theme-color" content="#fafafa">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/f64cdc1941.js"></script>
 </head>
 <body>
 <div class="main-container">
-  <div class="header">
-    <div class="navpanel">
-      <ul class="nav-links">
-        <li><a class="link" href="#">One</a></li>
-        <li><a class="link" href="#">Two</a></li>
-        <li><a class="link" href="#">Three</a></li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Admin Panel</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Statistics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Quizzes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Settings</a>
+        </li>
       </ul>
     </div>
-    <a class="cta" href="#"><button class="logout" type="reset">Logout</button></a>
-  </div>
+    <button type="button" class="btn btn-danger">Logout</button>
+  </nav>
 
   <div class="main">
-    <div class="main-actions">
-      <h1 class="heading-general">Questions</h1>
-      <a href="add-question.html"><button class="add" type="reset">Add</button></a>
+    <div class="top-info">
+      <h1><a href="add-question.html">Add Question</a></h1>
     </div>
-    <table class="table">
+    <table class="table table-striped">
       <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Question</th>
+        <th scope="col">Type</th>
         <th scope="col">Actions</th>
         <th scope="col">Created</th>
       </tr>
@@ -45,11 +61,10 @@
       <tbody>
       <tr>
         <th scope="row">1</th>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, sed.</td>
+        <td>Radio</td>
         <td>
-          Lorem ipsum dolor sit.
-        </td>
-        <td>
-          <a href="#" class="btn btn-light">
+          <a href="" class="btn btn-light">
             <i class="fas fa-pencil-alt"></i>
           </a>
 
@@ -57,15 +72,14 @@
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>
-        <td><span class="date">01/14/2019</span></td>
+        <td><span>06/12/2017</span></td>
       </tr>
       <tr>
         <th scope="row">2</th>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa cumque eveniet facilis, fuga ipsum numquam perferendis voluptas! Autem, dicta?</td>
+        <td>Text</td>
         <td>
-          Lorem ipsum dolor sit amet, consectetur adipisicing.
-        </td>
-        <td>
-          <a href="#" class="btn btn-light">
+          <a href="" class="btn btn-light">
             <i class="fas fa-pencil-alt"></i>
           </a>
 
@@ -73,15 +87,14 @@
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>
-        <td><span class="date">07/12/2016</span></td>
+        <td><span>10/01/2019</span></td>
       </tr>
       <tr>
         <th scope="row">3</th>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, sapiente?</td>
+        <td>Text</td>
         <td>
-          Lorem ipsum dolor.
-        </td>
-        <td>
-          <a href="#" class="btn btn-light">
+          <a href="" class="btn btn-light">
             <i class="fas fa-pencil-alt"></i>
           </a>
 
@@ -89,15 +102,14 @@
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>
-        <td><span class="date">10/10/2019</span></td>
+        <td><span>06/09/2018</span></td>
       </tr>
       <tr>
         <th scope="row">4</th>
+        <td>Lorem ipsum dolor sit.</td>
+        <td>Text</td>
         <td>
-          Lorem ipsum dolor sit.
-        </td>
-        <td>
-          <a href="#" class="btn btn-light">
+          <a href="" class="btn btn-light">
             <i class="fas fa-pencil-alt"></i>
           </a>
 
@@ -105,15 +117,14 @@
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>
-        <td><span class="date">01/02/2018</span></td>
+        <td><span>06/22/2019</span></td>
       </tr>
       <tr>
         <th scope="row">5</th>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+        <td>Check</td>
         <td>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur libero perspiciatis quaerat quia quos recusandae rerum sapiente temporibus totam ut!
-        </td>
-        <td>
-          <a href="#" class="btn btn-light">
+          <a href="" class="btn btn-light">
             <i class="fas fa-pencil-alt"></i>
           </a>
 
@@ -121,12 +132,11 @@
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>
-        <td><span class="date">01/14/2019</span></td>
+        <td><span>06/22/2019</span></td>
       </tr>
       </tbody>
     </table>
   </div>
 
-</div>
 </body>
 </html>
