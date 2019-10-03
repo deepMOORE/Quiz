@@ -19,7 +19,7 @@
     </label>
   </div>
   <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required oninvalid="this.setCustomValidity('Email has invalid format')" autofocus>
   <div class="input-hint">
     <label class="label-hint">
       Password
@@ -28,14 +28,16 @@
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
   <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
+    <label class="check option">
+      <input class="check-input" type="checkbox" value="remember-me">
+      <span class="check-box"></span>
+      Remember me
     </label>
   </div>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   <div class="mb-3">
     <label>
-      <a href="#">I forgot my password</a>
+      <a class="forgot-password" href="#">I forgot my password</a>
     </label>
   </div>
 </form>
