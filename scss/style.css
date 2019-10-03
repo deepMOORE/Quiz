@@ -1,0 +1,334 @@
+/* ------------------------- Private ------------------------- */
+.main {
+  width: 1600px;
+  margin: 50px auto;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+}
+
+.form-group.btn-primary {
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1655px) {
+  .main {
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .main {
+    width: 650px;
+  }
+}
+@media screen and (max-width: 649px) {
+  .main {
+    width: 100%;
+  }
+}
+/* ------------------------- Public ------------------------- */
+.public-body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 24px;
+  color: black;
+}
+
+.dialog-window {
+  max-width: 800px;
+  padding: 75px 24px;
+  margin: 0 auto;
+}
+
+.question-box {
+  padding-top: 20px;
+}
+
+.question-text {
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.question-info {
+  text-align: center;
+  font-size: 2.8em;
+}
+
+.option {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.check {
+  border-radius: 20px;
+  padding-left: 1.2em;
+  margin-bottom: 1.1em;
+}
+
+.radio-input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.radio-box {
+  position: absolute;
+  margin-left: -1.2em;
+  width: 1em;
+  height: 1em;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.radio-input:checked + .radio-box {
+  background-color: #4CAF50;
+}
+
+.radio-input:hover + .radio-box {
+  background-color: tomato;
+}
+
+.radio-box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check input:checked ~ .radio-box:after {
+  display: block;
+}
+
+.check .radio-box:after {
+  top: 8px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.back-button, .submit-button {
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.back-button {
+  padding: 0.35em 1.45em 0.35em 1.45em;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 0.2em;
+}
+
+.submit-button {
+  padding: 0.35em 1em 0.35em 1em;
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid white;
+  margin-right: 0.2em;
+}
+
+/* Login */
+.login-page {
+  height: 100%;
+}
+
+.text-center {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 40px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 20px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.option {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.check {
+  padding-left: 1.2em;
+}
+
+.check-box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  margin-left: -1.2em;
+  margin-top: 3px;
+  background-image: url(../svg/square-regular.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.check-input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.check-input:checked + .check-box {
+  border: none;
+  background-image: url(../svg/check-square-solid.svg);
+}
+
+.check-input:focus + .check-box {
+  box-shadow: 0 0 0 0.2rem #252628;
+}
+
+.check-input:checked:focus + .check-box {
+  border: none;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem #252628;
+  border-color: snow;
+  z-index: 2;
+}
+
+.form-signin input[type=email] {
+  margin-bottom: -1px;
+}
+
+.form-signin input[type=password] {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  border-radius: 8px;
+}
+
+.btn-lg {
+  border-radius: 8px;
+}
+
+.input-hint {
+  display: flex;
+  align-items: flex-start;
+}
+
+.label-hint {
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+.forgot-password {
+  color: black;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #24292E;
+  border-color: #24292E;
+}
+
+.btn-primary:hover {
+  background-color: #2d3237;
+  border-color: #2d3237;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  background-color: #353a3f;
+  border-color: #353a3f;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #252628;
+}
+
+.forgot-password:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.input-hint:after {
+  content: "*";
+  color: tomato;
+  padding-left: 3px;
+  padding-top: 7px;
+}
+
+@media screen and (max-width: 630px) {
+  .forgot {
+    margin-top: 40px;
+  }
+
+  .forgot-password {
+    color: white;
+  }
+}
+/* Public Media */
+@media screen and (max-width: 850px) {
+  .question-text {
+    font-size: 1.2em;
+  }
+
+  .question-info {
+    font-size: 1.8em;
+  }
+
+  .check, .buttons {
+    font-size: 16px;
+  }
+
+  .check .radio-box:after {
+    top: 4px;
+    left: 4px;
+  }
+}
+@media screen and (max-width: 250px) {
+  .question-info {
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .submit-button {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .back-button {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
