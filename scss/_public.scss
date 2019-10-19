@@ -1,40 +1,13 @@
-.main {
-  width: 1600px;
-  margin: 50px auto;
-}
+@import 'colors';
 
-.tags {
-  display: flex;
-  flex-direction: row;
-}
-
-.tag {
-  display: flex;
-  flex-direction: row;
-  padding-right: 20px;
-}
-
-.form-group.btn-primary {
-  border-radius: 20px;
-}
-
-@media screen and (max-width: 1655px) {
-  .main {
-    width: 1000px;
+@mixin set-checkbox-appearance {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
-}
-@media screen and (max-width: 1040px) {
-  .main {
-    width: 650px;
-  }
-}
-@media screen and (max-width: 649px) {
-  .main {
-    width: 100%;
-  }
-}
+
 .public-body {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 24px;
   color: black;
 }
@@ -72,9 +45,7 @@
 
 .radio-input {
   position: absolute;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  @include set-checkbox-appearance();
 }
 
 .radio-box {
@@ -87,7 +58,7 @@
 }
 
 .radio-input:checked + .radio-box {
-  background-color: #4CAF50;
+  background-color: $success-color;
 }
 
 .radio-input:hover + .radio-box {
@@ -127,7 +98,7 @@
 
 .submit-button {
   padding: 0.35em 1em 0.35em 1em;
-  background-color: #4CAF50;
+  background-color: $success-color;
   color: white;
   border: 1px solid white;
   margin-right: 0.2em;
@@ -144,7 +115,7 @@
   -ms-flex-align: center;
   align-items: center;
   padding-bottom: 40px;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .form-signin {
@@ -180,9 +151,7 @@
 
 .check-input {
   position: absolute;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  @include set-checkbox-appearance();
 }
 
 .check-input:checked + .check-box {
@@ -191,7 +160,7 @@
 }
 
 .check-input:focus + .check-box {
-  box-shadow: 0 0 0 0.2rem #252628;
+  box-shadow: 0 0 0 0.2rem $shadow-color;
 }
 
 .check-input:checked:focus + .check-box {
@@ -207,16 +176,16 @@
 }
 
 .form-signin .form-control:focus, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem #252628;
+  box-shadow: 0 0 0 0.2rem $shadow-color;
   border-color: snow;
   z-index: 2;
 }
 
-.form-signin input[type=email] {
+.form-signin input[type="email"] {
   margin-bottom: -1px;
 }
 
-.form-signin input[type=password] {
+.form-signin input[type="password"] {
   margin-bottom: 10px;
 }
 
@@ -240,10 +209,8 @@
 
 .forgot-password {
   color: black;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  @include set-checkbox-appearance();
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .btn-primary {
@@ -257,13 +224,13 @@
   border-color: #2d3237;
 }
 
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
   background-color: #353a3f;
   border-color: #353a3f;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem #252628;
+.btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $shadow-color;
 }
 
 .forgot-password:hover {
@@ -277,7 +244,7 @@
   padding-top: 7px;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 630px){
   .forgot {
     margin-top: 40px;
   }
@@ -286,7 +253,8 @@
     color: white;
   }
 }
-@media screen and (max-width: 850px) {
+
+@media screen and (max-width: 850px){
   .question-text {
     font-size: 1.2em;
   }
@@ -295,7 +263,7 @@
     font-size: 1.8em;
   }
 
-  .check, .buttons {
+  .check, .buttons{
     font-size: 16px;
   }
 
@@ -304,7 +272,8 @@
     left: 4px;
   }
 }
-@media screen and (max-width: 250px) {
+
+@media screen and (max-width: 250px){
   .question-info {
     font-size: 1.4em;
     text-align: center;
@@ -325,5 +294,3 @@
     margin-left: 0;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

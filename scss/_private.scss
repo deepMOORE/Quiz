@@ -1,0 +1,37 @@
+.main {
+  width: 1600px;
+  margin: 50px auto;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+}
+
+.form-group.btn-primary {
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1655px){
+  .main {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1040px){
+  .main {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 649px){
+  .main {
+    width: 100%;
+  }
+}
