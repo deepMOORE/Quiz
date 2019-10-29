@@ -14,7 +14,7 @@ function askNextQuestion(text) {
 }
 
 function countRightAnswers(answers) {
-    return answers.filter(x => x == true).length;
+    return answers.filter(x => x === true).length;
 }
 
 function mapToQuestionAnswer(questions) {
@@ -71,7 +71,7 @@ $.getJSON(jsonQuestionsPath, function (unprepearedQuestions) {
         let currentQuestion = questions.shift();
         let currentAnswer = askNextQuestion(currentQuestion.text);
         let rightAnswer = currentQuestion.answer;
-        answers.push(currentAnswer == rightAnswer);
+        answers.push(currentAnswer === rightAnswer);
     }
 
     let rightAnswersCount = countRightAnswers(answers);
