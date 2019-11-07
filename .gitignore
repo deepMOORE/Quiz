@@ -2,6 +2,6 @@
 /node_modules
 /.idea
 # compilation files
-/src/styles/css/style.css
-/src/styles/css/style.map.css
+/src/styles/scss/style.css
+/src/styles/scss/style.css.map
 /src/scripts/compiled
