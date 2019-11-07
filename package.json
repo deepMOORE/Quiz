@@ -8,21 +8,23 @@
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "jasmine": "^3.5.0",
+    "jasmine-console-reporter": "^3.1.0",
     "node-php": "^0.0.1",
     "node-sass": "^4.12.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4"
+    "@babel/core": "^7.6.4",
+    "jasmine": "^3.5.0"
   },
   "scripts": {
-    "test": "jasmine",
-    "server" : "php -S 127.0.0.1:8080",
-    "dev:js" : "./node_modules/.bin/babel js/src/ --watch --out-file js/compiled/consoleQuiz.js",
-    "build:js" : "./node_modules/.bin/babel js/src/ --out-file js/compiled/consoleQuiz.js",
-    "dev:css": "sass --watch scss/style.scss:scss/style.css",
-    "build:css": "sass scss/style.scss:scss/style.css"
+    "test": "node test.js",
+    "server": "php -S 127.0.0.1:8080",
+    "start" : "node src/scripts/app/consoleQuiz/app.js",
+    "dev:js": "./node_modules/.bin/babel src/scripts/app/consoleQuiz/app.js --watch --out-file src/scripts/compiled/app.js",
+    "build:js": "./node_modules/.bin/babel src/scripts/app/consoleQuiz/app.js --out-file src/scripts/compiled/app.js",
+    "dev:css": "sass --watch src/styles/scss/style.scss:src/styles/css/style.css",
+    "build:css": "sass src/styles/scss/style.scss:src/styles/css/style.css"
   },
   "repository": {
     "type": "git",

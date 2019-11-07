@@ -1,8 +1,7 @@
 # packages
 /node_modules
 /.idea
-/tests/vendor
 # compilation files
-/scss/style.css
-/scss/style.map.css
-/js/src
+/src/styles/css/style.css
+/src/styles/css/style.map.css
+/src/scripts/compiled
