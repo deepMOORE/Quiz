@@ -23,8 +23,8 @@
     "start" : "node src/scripts/app/consoleQuiz/app.js",
     "dev:js": "./node_modules/.bin/babel src/scripts/app/consoleQuiz/app.js --watch --out-file src/scripts/compiled/app.js",
     "build:js": "./node_modules/.bin/babel src/scripts/app/consoleQuiz/app.js --out-file src/scripts/compiled/app.js",
-    "dev:css": "sass --watch src/styles/scss/style.scss:src/styles/css/style.css",
-    "build:css": "sass src/styles/scss/style.scss:src/styles/css/style.css"
+    "dev:css": "sass --watch src/styles/scss/style.scss:src/styles/scss/style.css",
+    "build:css": "sass src/styles/scss/style.scss:src/styles/scss/style.css"
   },
   "repository": {
     "type": "git",
