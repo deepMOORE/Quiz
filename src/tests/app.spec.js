@@ -1,4 +1,9 @@
-describe('App', function () {
+const countRightAnswers = require('../scripts/app/consoleQuiz/app');
+const isTimerEnabled = require('../scripts/app/consoleQuiz/app');
+const hasNextQuestion = require('../scripts/app/consoleQuiz/app');
+
+
+describe('Console quiz tests.', function () {
     it('shouldCountRightQuestionsNumber', function () {
         let testResult = [true, true, false, false, true, true];
         let rightAnswers = countRightAnswers(testResult);
