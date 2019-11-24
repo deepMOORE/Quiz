@@ -10,7 +10,8 @@ You should build the scss files by `build` and use `dev` further for watch mode:
 npm run dev:css
 npm run build:css
 ```
-You can use php server `127.0.0.1:8080`.
+You can use php server `127.0.0.1:8080` or `lite-server` instead.
 ```
-npm run server
+npm run php-server
+npm run lite-server
 ```

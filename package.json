@@ -12,12 +12,14 @@
     "node-sass": "^4.12.0"
   },
   "devDependencies": {
-    "jasmine": "^3.5.0"
+    "jasmine": "^3.5.0",
+    "lite-server": "^2.5.4"
   },
   "scripts": {
     "test": "node test.js",
-    "server": "php -S 127.0.0.1:8080",
-    "start" : "node src/scripts/app/consoleQuiz/app.js",
+    "php-server": "php -S 127.0.0.1:8080",
+    "lite-server": "lite-server",
+    "start": "node src/scripts/app/consoleQuiz/app.js",
     "dev:css": "sass --watch src/styles/scss/style.scss:src/styles/scss/style.css",
     "build:css": "sass src/styles/scss/style.scss:src/styles/scss/style.css"
   },
