@@ -5,10 +5,9 @@ The project is provided as a set of Node.js packages.
 ```
 npm i
 ```
-You can build the project src files using:
-
+You should build the scss files by `build` and use `dev` further for watch mode:
 ```
-npm run build:js
+npm run dev:css
 npm run build:css
 ```
 You can use php server `127.0.0.1:8080`.
