@@ -19,7 +19,7 @@
     "test": "node test.js",
     "php-server": "php -S 127.0.0.1:8080",
     "lite-server": "lite-server",
-    "start": "node src/scripts/app/consoleQuiz/app.js",
+    "start": "node index.js",
     "dev:css": "sass --watch src/styles/scss/style.scss:src/styles/scss/style.css",
     "build:css": "sass src/styles/scss/style.scss:src/styles/scss/style.css"
   },
