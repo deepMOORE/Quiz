@@ -4,3 +4,5 @@
 # compilation files
 /src/styles/scss/style.css
 /src/styles/scss/style.css.map
+# webpack compiled
+/dist/main.js
