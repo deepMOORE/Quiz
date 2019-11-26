@@ -1,6 +1,6 @@
 class Dialog {
     startupMessage(){
-        console.info('Готовы к прохождению этого инновационного, точного и сложнейшего теста на iq? Думайте быстро, у вас 15 секунд!');
+        alert('Готовы к прохождению этого инновационного, точного и сложнейшего теста на iq? Думайте быстро, у вас 15 секунд!');
     }
 
     resultOfQuizMessage(rightAnswers, totalAnswers) {
@@ -29,13 +29,9 @@ class Dialog {
             case 1:
             case 0:
                 message += 'Ваш IQ < 30. Как и у создателя теста!';
-                console.info(message);
+                alert(message);
                 break;
         }
-    }
-
-    askQuestionMessage(message) {
-        console.info(message);
     }
 }
 

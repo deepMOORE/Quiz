@@ -1,23 +1,23 @@
-const QuestionsRepository = require('./QuestionsRepository');
-const QuestionsService = require('./QuestionsService');
-const QuestionsTimer = require('./QuestionsTimer');
-const Dialog = require('./Dialog');
+const QuestionsRepository = require('./questions-repository');
+const QuestionsService = require('./questions-service');
+const QuestionsTimer = require('./questions-timer');
+const Dialog = require('./dialog');
+const rawQuestions = require('../json/questions.json');
 
 function main() {
     const dialog = new Dialog();
     dialog.startupMessage();
-    const questionsRepository = new QuestionsRepository('../json/questions.json');
+    const questionsRepository = new QuestionsRepository(rawQuestions);
     const questionsService = new QuestionsService();
     const timer = new QuestionsTimer(15000);
 
     let answers =[];
-    let questions = questionsRepository.getQuestions();
+    let questions = questionsRepository.getQuestionAnswerModel();
 
     while (questionsService.hasNext(questions) && timer.isTimerEnabled()) {
         let currentQuestion = questions.shift();
-        dialog.askQuestionMessage(currentQuestion.text);
 
-        let currentAnswer = questionsService.askNext();
+        let currentAnswer = questionsService.askNext(currentQuestion.text);
         let rightAnswer = currentQuestion.answer;
 
         answers.push(currentAnswer === rightAnswer);
