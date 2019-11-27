@@ -25,8 +25,8 @@
     "start": "node src/index.js",
     "dev:css": "sass --watch src/styles/scss/style.scss:src/styles/scss/style.css",
     "build:css": "sass src/styles/scss/style.scss:src/styles/scss/style.css",
-    "build": "webpack",
-    "dev": "npx webpack --watch"
+    "build": "webpack --devtool source-map",
+    "dev": "npx webpack --watch --devtool source-map"
   },
   "repository": {
     "type": "git",
