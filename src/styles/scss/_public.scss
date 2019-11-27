@@ -39,8 +39,8 @@
 
 .check {
   border-radius: 20px;
-  padding-left: 1.2em;
   margin-bottom: 1.1em;
+  padding: 10px;
 }
 
 .radio-input {
@@ -62,7 +62,7 @@
 }
 
 .radio-input:hover + .radio-box {
-  background-color: tomato;
+  background-color: $danger-color;
 }
 
 .radio-box:after {
@@ -85,8 +85,20 @@
 }
 
 .back-button, .submit-button {
+  width: 165px;
   border-radius: 20px;
   text-transform: uppercase;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.back-button:hover {
+  color: white;
+  background-color: black;
+}
+
+.submit-button:hover {
+  color: white;
+  background-color: #3b803f;
 }
 
 .back-button {
@@ -286,11 +298,15 @@
   }
 
   .submit-button {
+    width: 175px;
+    height: 40px;
     margin-bottom: 10px;
     margin-right: 0;
   }
 
   .back-button {
+    width: 175px;
+    height: 40px;
     margin-left: 0;
   }
 }
