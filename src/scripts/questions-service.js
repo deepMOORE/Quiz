@@ -1,4 +1,4 @@
-class QuestionsService {
+export class QuestionsService {
     hasNext(questions) {
         return questions.length > 0;
     }
@@ -11,5 +11,3 @@ class QuestionsService {
         return answers.filter(x => x === true).length;
     }
 }
-
-module.exports = QuestionsService;

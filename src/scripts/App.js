@@ -1,20 +1,18 @@
-const QuestionsRepository = require('./questions-repository');
-const QuestionsService = require('./questions-service');
-const QuestionsTimer = require('./questions-timer');
-const Dialog = require('./dialog');
+import {QuestionsRepository} from './questions-repository';
+import {QuestionsService} from './questions-service';
+import {Dialog} from './dialog';
 const rawQuestions = require('../json/questions.json');
 
-function main() {
+export function main() {
     const dialog = new Dialog();
     dialog.startupMessage();
     const questionsRepository = new QuestionsRepository(rawQuestions);
     const questionsService = new QuestionsService();
-    const timer = new QuestionsTimer(15000);
 
     let answers =[];
     let questions = questionsRepository.getQuestionAnswerModel();
 
-    while (questionsService.hasNext(questions) && timer.isTimerEnabled()) {
+    while (questionsService.hasNext(questions)) {
         let currentQuestion = questions.shift();
 
         let currentAnswer = questionsService.askNext(currentQuestion.text);
@@ -29,5 +27,3 @@ function main() {
 
     return 1;
 }
-
-module.exports = main;

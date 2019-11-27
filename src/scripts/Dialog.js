@@ -1,4 +1,4 @@
-class Dialog {
+export class Dialog {
     startupMessage(){
         alert('Готовы к прохождению этого инновационного, точного и сложнейшего теста на iq? Думайте быстро, у вас 15 секунд!');
     }
@@ -34,5 +34,3 @@ class Dialog {
         }
     }
 }
-
-module.exports = Dialog;

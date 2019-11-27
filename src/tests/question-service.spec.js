@@ -1,7 +1,7 @@
-const QuestionService = require('../scripts/questions-service');
+import {QuestionsService} from '../scripts/questions-service';
 
 describe('Service Tests', () => {
-    let questionService = new QuestionService();
+    const questionService = new QuestionsService();
 
     it('should has next question', () => {
         let questions = [

@@ -1,6 +1,6 @@
 const {toQuestionAnswer} = require('./utils/toQuestionAnswer');
 
-class QuestionsRepository {
+export class QuestionsRepository {
     constructor(rawQuestions) {
         this.questions = rawQuestions;
     }
@@ -13,5 +13,3 @@ class QuestionsRepository {
         return this.questions.length;
     }
 }
-
-module.exports = QuestionsRepository;

@@ -6,3 +6,4 @@
 /src/styles/scss/style.css.map
 # webpack compiled
 /dist/main.js
+/dist/main.js.map

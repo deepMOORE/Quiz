@@ -1,4 +1,4 @@
-const QuestionRepository = require('../scripts/questions-repository');
+import {QuestionsRepository} from '../scripts/questions-repository';
 
 let questions = [
     {
@@ -28,20 +28,20 @@ let questions = [
 
 describe('Question Repository  Tests', () => {
     it('should create repository correctly', () => {
-        let questionsRepository = new QuestionRepository(questions);
+        let questionsRepository = new QuestionsRepository(questions);
 
         expect(questionsRepository.getQuestionsCount()).toBe(4);
         expect(questionsRepository).toBeDefined();
     });
 
     it('should count questions', () => {
-        let questionsRepository = new QuestionRepository(questions);
+        let questionsRepository = new QuestionsRepository(questions);
 
         expect(questionsRepository.getQuestionsCount()).toBe(4);
     });
 
     it('should not count questions', () => {
-        let questionsRepository = new QuestionRepository([]);
+        let questionsRepository = new QuestionsRepository([]);
 
         expect(questionsRepository.getQuestionsCount()).toBe(0);
     });
