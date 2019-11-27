@@ -6,7 +6,7 @@ class QuestionsTimer {
 
     isTimerEnabled() {
         let now = new Date();
-        return now <= this.endDate;
+        return now.getDate() <= this.endDate;
     }
 }
 
