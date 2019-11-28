@@ -1,0 +1,152 @@
+@import 'colors';
+@import 'set-checkbox-apperance';
+
+.login-page {
+  height: 100%;
+}
+
+.text-center {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 40px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 20px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.option {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.check {
+  padding-left: 1.2em;
+}
+
+.check-box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  margin-left: -1.2em;
+  margin-top: 3px;
+  background-image: url(../svg/square-regular.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.check-input {
+  position: absolute;
+  @include set-checkbox-appearance();
+}
+
+.check-input:checked + .check-box {
+  border: none;
+  background-image: url(../svg/check-square-solid.svg);
+}
+
+.check-input:focus + .check-box {
+  box-shadow: 0 0 0 0.2rem $shadow;
+}
+
+.check-input:checked:focus + .check-box {
+  border: none;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem $shadow;
+  border-color: snow;
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  border-radius: 8px;
+}
+
+.btn-lg {
+  border-radius: 8px;
+}
+
+.input-hint {
+  display: flex;
+  align-items: flex-start;
+}
+
+.label-hint {
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+.forgot-password {
+  color: black;
+  @include set-checkbox-appearance();
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #24292E;
+  border-color: #24292E;
+}
+
+.btn-primary:hover {
+  background-color: #2d3237;
+  border-color: #2d3237;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  background-color: #353a3f;
+  border-color: #353a3f;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $shadow;
+}
+
+.forgot-password:hover {
+  color: black;
+}
+
+.input-hint:after {
+  content: "*";
+  color: tomato;
+  padding-left: 3px;
+  padding-top: 7px;
+}
+
+@media screen and (max-width: 630px){
+  .forgot {
+    margin-top: 40px;
+  }
+
+  .forgot-password {
+    color: white;
+  }
+}

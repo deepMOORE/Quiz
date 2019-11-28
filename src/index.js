@@ -1,4 +1,3 @@
-import {main} from './scripts/app';
+import {app} from './scripts/app';
 
-const result = main();
-console.info(result);
+const result = app();

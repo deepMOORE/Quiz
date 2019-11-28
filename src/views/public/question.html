@@ -4,59 +4,66 @@
   <meta charset="utf-8">
   <title>Question</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
-  <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="../../styles/normalize.css">
   <link rel="stylesheet" href="../../styles/scss/style.css">
+
   <meta name="theme-color" content="#fafafa">
 </head>
 <body class="public-body">
-<!--[if IE]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-<![endif]-->
+<div class="wrapper">
+  <form class="quiz-form" method="POST">
+    <div class="js-form-control">
+      <div class="question-info">Question #2</div>
+      <div class="question-text">Which lorem you like the most?</div>
+      <div class="question-box">
+        <div class="form-control-radio">
+          <label class="check option">
+            <input class="radio-input" type="radio" name="case2">
+            <span class="radio-box"></span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque.
+          </label>
+        </div>
 
-<!-- Add your site or application content here -->
-<div class="dialog-window">
-  <form class="quiz-form" action="SomeEndpoint.php" method="POST">
-    <div class="question-info">Question #2</div>
-    <div class="question-text">Which lorem you like the most?</div>
-    <div class="question-box">
-      <label class="check option">
-        <input class="radio-input" type="radio" name="case1">
-        <span class="radio-box"></span>
-        Lorem ipsum dolor sit amet.
-      </label>
+        <div class="form-control-radio">
+          <label class="check option">
+            <input class="radio-input" type="radio" name="case2">
+            <span class="radio-box"></span>
+            Lorem ipsum dolor sit amet.
+          </label>
+        </div>
 
-      <label class="check option">
-        <input class="radio-input" type="radio" name="case2">
-        <span class="radio-box"></span>
-        Lorem ipsum.
-      </label>
+        <div class="form-control-radio">
+          <label class="check option">
+            <input class="radio-input" type="radio" name="case2">
+            <span class="radio-box"></span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur iusto molestias quaerat!
+          </label>
+        </div>
 
-      <label class="check option">
-        <input class="radio-input" type="radio" name="case3">
-        <span class="radio-box"></span>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, modi!
-      </label>
+        <div class="form-control-radio">
+          <label class="check option">
+            <input class="radio-input" type="radio" name="case2">
+            <span class="radio-box"></span>
+            Lorem ipsum.
+          </label>
+        </div>
 
-      <label class="check option">
-        <input class="radio-input" type="radio" name="case4">
-        <span class="radio-box"></span>
-        Lorem ipsum dolor sit amet.
-      </label>
-
-      <label class="check option">
-        <input class="radio-input" type="radio" name="case5">
-        <span class="radio-box"></span>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, alias architecto blanditiis eligendi in ipsum minima nihil placeat velit voluptatibus?
-      </label>
+        <div class="form-control-radio">
+          <label class="check option">
+            <input class="radio-input" type="radio" name="case2">
+            <span class="radio-box"></span>
+            Lorem ipsum dolor.
+          </label>
+        </div>
+      </div>
     </div>
     <div class="buttons">
       <button class="submit-button" type="submit">Submit</button>
       <button class="back-button" type="reset">Back</button>
     </div>
+    <script src="../../../dist/main.js"></script>
   </form>
 </div>
 
