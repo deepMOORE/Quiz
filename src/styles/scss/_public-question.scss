@@ -24,6 +24,21 @@
   padding-top: 20px;
 }
 
+.input-area {
+  max-width: 100%;
+  min-width: 105%;
+  margin-left: -25px;
+  height: 30px;
+  min-height: 30px;
+  border-radius: 5px;
+}
+
+.input-area:focus {
+  outline: none !important;
+  border: 2px solid $black;
+  box-shadow: none;
+}
+
 .question-text {
   font-size: 2.2em;
   text-align: center;
@@ -39,7 +54,7 @@
   margin-bottom: 0.25em;
 }
 
-.check {
+.input-label {
   border-radius: 20px;
   margin-bottom: 1.1em;
   padding: 10px;
@@ -73,11 +88,11 @@
   display: none;
 }
 
-.check input:checked ~ .radio-box:after {
+.input-label input:checked ~ .radio-box:after {
   display: block;
 }
 
-.check .radio-box:after {
+.input-label .radio-box:after {
   top: 8px;
   left: 8px;
   width: 8px;
@@ -178,5 +193,11 @@
 
   .submit-button {
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 280px){
+  .back-button, .submit-button {
+    width: 85%;
   }
 }

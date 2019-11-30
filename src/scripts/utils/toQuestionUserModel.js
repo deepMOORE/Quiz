@@ -3,9 +3,7 @@ function toQuestionUserModel(x) {
         text : x.text,
         answer : x.answer,
         type : x.type,
-        variants: [
-            ...x.variants
-        ]
+        variants: (x.variants === null)? null : [...x.variants]
     };
 }
 
