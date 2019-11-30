@@ -26,7 +26,8 @@
     "dev:css": "sass --watch src/styles/scss/style.scss:src/styles/scss/style.css",
     "build:css": "sass src/styles/scss/style.scss:src/styles/scss/style.css",
     "build": "webpack --devtool source-map",
-    "dev": "npx webpack --watch --devtool source-map"
+    "dev": "npx webpack --watch --devtool source-map",
+    "db": "json-server --watch src/fakedb/db.json --port 3004"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "text": "How many legs cock has?",
+    "tags": [
+      "magna",
+      "sunt",
+      "ex",
+      "nostrud"
+    ],
+    "type": "radio",
+    "created_at": "Fri Aug 22 2014 16:16:07 GMT+0000",
+    "image": "http://someplacewithimages.it/32x32",
+    "answer": "2",
+    "variants": [
+      "4",
+      "2",
+      "Four",
+      "Potato"
+    ]
+  },
+  {
+    "id": 1,
+    "text": "How many legs crocodile has? ",
+    "tags": [
+      "et",
+      "quis",
+      "pariatur",
+      "non"
+    ],
+    "type": "radio",
+    "created_at": "Sat Jul 29 2017 00:16:26 GMT+0000",
+    "image": "http://someplacewithimages.it/32x32",
+    "answer": "4",
+    "variants": [
+      "December",
+      "11",
+      "Four",
+      "0"
+    ]
+  }
+]

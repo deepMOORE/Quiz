@@ -1,0 +1,152 @@
+{
+  "i18n": [
+    {
+      "id": "1",
+      "override_string_ru" : "Добавить вопрос",
+      "override_string_en" : "Add question"
+    },
+    {
+      "id": "2",
+      "override_string_ru" : "Профили",
+      "override_string_en" : "Users"
+    },
+    {
+      "id": "3",
+      "override_string_ru" : "Статистика",
+      "override_string_en" : "Statistics"
+    },
+    {
+      "id": "4",
+      "override_string_ru" : "Опросы",
+      "override_string_en" : "Quizzes"
+    },
+    {
+      "id": "5",
+      "override_string_ru" : "Настройки",
+      "override_string_en" : "Settings"
+    },
+    {
+      "id": "5",
+      "override_string_ru" : "Настройки",
+      "override_string_en" : "Settings"
+    },
+    {
+      "id": "6",
+      "override_string_ru" : "Администратор",
+      "override_string_en" : "Admin Panel"
+    },
+    {
+      "id": "7",
+      "override_string_ru" : "Выйти",
+      "override_string_en" : "Logout"
+    },
+    {
+      "id": "8",
+      "override_string_ru" : "Вопрос",
+      "override_string_en" : "Question"
+    },
+    {
+      "id": "9",
+      "override_string_ru" : "Тип",
+      "override_string_en" : "Type"
+    },
+    {
+      "id": "10",
+      "override_string_ru" : "Действия",
+      "override_string_en" : "Actions"
+    },
+    {
+      "id": "11",
+      "override_string_ru" : "Создан",
+      "override_string_en" : "Created"
+    },
+    {
+      "id": "12",
+      "override_string_ru" : "Текст",
+      "override_string_en" : "Text"
+    },
+    {
+      "id": "13",
+      "override_string_ru" : "Один",
+      "override_string_en" : "Radio"
+    },
+    {
+      "id": "14",
+      "override_string_ru" : "Много",
+      "override_string_en" : "Check"
+    },
+    {
+      "id": "15",
+      "override_string_ru" : "Найстройка вопроса",
+      "override_string_en" : "Question features"
+    },
+    {
+      "id": "16",
+      "override_string_ru" : "Вопрос",
+      "override_string_en" : "Question"
+    },
+    {
+      "id": "17",
+      "override_string_ru" : "Теги",
+      "override_string_en" : "Tags"
+    },
+    {
+      "id": "18",
+      "override_string_ru" : "Тип вопроса",
+      "override_string_en" : "Type"
+    },
+    {
+      "id": "19",
+      "override_string_ru" : "Ответ",
+      "override_string_en" : "Answer"
+    }
+  ,
+    {
+      "id": "20",
+      "override_string_ru" : "Создать",
+      "override_string_en" : "Submit"
+    }
+  ],
+  "questions": [
+    {
+      "id": 0,
+      "text": "How many legs cock has?",
+      "tags": [
+        "magna",
+        "sunt",
+        "ex",
+        "nostrud"
+      ],
+      "type": "radio",
+      "created_at": "Fri Aug 22 2014 16:16:07 GMT+0000",
+      "image": "http://someplacewithimages.it/32x32",
+      "answer": "2",
+      "variants": [
+        "4",
+        "2",
+        "Four",
+        "Potato"
+      ]
+    },
+    {
+      "id": 1,
+      "text": "How many legs crocodile has? ",
+      "tags": [
+        "et",
+        "quis",
+        "pariatur",
+        "non"
+      ],
+      "type": "radio",
+      "created_at": "Sat Jul 29 2017 00:16:26 GMT+0000",
+      "image": "http://someplacewithimages.it/32x32",
+      "answer": "4",
+      "variants": [
+        "December",
+        "11",
+        "Four",
+        "0"
+      ]
+    }
+  ]
+}

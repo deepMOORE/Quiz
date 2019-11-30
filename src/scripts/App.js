@@ -1,29 +1,38 @@
 import {QuestionsRepository} from './questions-repository';
-import {QuestionsService} from './questions-service';
-import {Dialog} from './dialog';
-const rawQuestions = require('../json/questions.json');
+import {AnswerGenerator} from './answer-generator';
+import {QuestionGenerator} from './question-generator';
+import {AnswerViewer} from "./answer-viewer";
+import {QuestionViewer} from "./question-viewer";
 
-export function main() {
-    const dialog = new Dialog();
-    dialog.startupMessage();
-    const questionsRepository = new QuestionsRepository(rawQuestions);
-    const questionsService = new QuestionsService();
+/** @type {HTMLFormElement} */
+let form = document.querySelector('.quiz-form');
 
-    let answers =[];
-    let questions = questionsRepository.getQuestionAnswerModel();
+export function app() {
+    const answerGenerator = new AnswerGenerator();
+    const answerViewer = new AnswerViewer();
+    const questionGenerator = new QuestionGenerator();
+    const questionViewer = new QuestionViewer();
 
-    while (questionsService.hasNext(questions)) {
-        let currentQuestion = questions.shift();
+    const questionRepository = new QuestionsRepository();
+    let questions = questionRepository.getQuestionUserModels();
 
-        let currentAnswer = questionsService.askNext(currentQuestion.text);
-        let rightAnswer = currentQuestion.answer;
+    let questionIndex = 0;
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-        answers.push(currentAnswer === rightAnswer);
-    }
+        answerViewer.clear();
+        questionViewer.clearHeader();
 
-    let questionsCount = questionsRepository.getQuestionsCount();
-    let rightAnswersCount = questionsService.countRightAnswers(answers);
-    dialog.resultOfQuizMessage(rightAnswersCount, questionsCount);
+        let currentQuestion = questions[questionIndex];
+        let questionPreviewHTML = questionGenerator.generatePreview(questionIndex + 1); // Normal people start counting with zero
+        let questionTextHTML = questionGenerator.generateQuestionText(currentQuestion.text);
+        let answersHTML = answerGenerator.generate(currentQuestion.variants, currentQuestion.type);
 
-    return 1;
+        answerViewer.view(answersHTML);
+        questionViewer.viewHeader(questionPreviewHTML, questionTextHTML);
+        questionIndex++;
+    })
 }
+
+
+
