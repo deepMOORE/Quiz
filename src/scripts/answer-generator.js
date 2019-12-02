@@ -4,17 +4,17 @@ export class AnswerGenerator {
     generate(question) {
         switch (question.type) {
             case QuestionTypes.RADIO :
-                return this.generateRadio(question);
+                return this._generateRadio(question);
 
             case QuestionTypes.CHECK :
-                return this.generateCheck(question);
+                return this._generateCheck(question);
 
             case QuestionTypes.TEXT :
-                return this.generateText(question);
+                return this._generateText(question);
         }
     }
 
-    generateRadio(question) {
+    _generateRadio(question) {
         let controlHTML = '';
         let variants = question.variants;
 
@@ -38,7 +38,7 @@ export class AnswerGenerator {
     }
 
     // todo: styles for checkbox overrides form login page, it's so bad
-    generateCheck(question) {
+    _generateCheck(question) {
         let controlHTML = '';
         let variants = question.variants;
 
@@ -61,7 +61,7 @@ export class AnswerGenerator {
         return controlHTML;
     }
 
-    generateText(question) {
+    _generateText(question) {
         let textAreaValue = '';
         if (question.userAnswers.length > 0) {
             textAreaValue = question.userAnswers[0];
