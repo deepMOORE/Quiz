@@ -108,6 +108,7 @@
 
 .back-button, .submit-button {
   width: 165px;
+  outline: 0;
   border-radius: 20px;
   text-transform: uppercase;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
