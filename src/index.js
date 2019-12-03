@@ -1,5 +1,5 @@
 import {app} from './scripts/app';
-import {privateApp} from './private/QuestionEditor/editor';
+import {edit} from './private/QuestionEditor/editor';
 
 const body = document.body;
 
@@ -10,6 +10,6 @@ switch (body.className) {
     case 'admin-startup':
         break;
     case 'add-question':
-        const addQuestion = privateApp();
+        const addQuestion = edit();
         break;
 }

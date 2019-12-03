@@ -5,7 +5,7 @@ let questionSelector = document.querySelector('select.form-control');
 
 const formViewer = new FormViewer();
 
-export function privateApp() {
+export function edit() {
     formViewer.view(QuestionTypes.RADIO);
 
     questionSelector.addEventListener('change', function() {
