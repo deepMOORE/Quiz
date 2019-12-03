@@ -1,5 +1,5 @@
 import {app} from './scripts/app';
-import {privateApp} from './private/QuestionEditor/question-editor';
+import {privateApp} from './private/QuestionEditor/editor';
 
 const body = document.body;
 
