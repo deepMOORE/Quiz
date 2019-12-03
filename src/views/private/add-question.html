@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
-  <link rel="manifest" href="site.webmanifest">
 
   <link rel="stylesheet" href="../../styles/normalize.css">
   <link rel="stylesheet" href="../../styles/scss/style.css">
@@ -16,7 +15,7 @@
   <script src="https://kit.fontawesome.com/f64cdc1941.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
+<body class="add-question">
 <div class="main-container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Admin Panel</a>
@@ -47,32 +46,32 @@
 
   <div class="main">
     <h1 class="heading-general">Question features</h1>
-    <form>
+    <form class="add-question-form">
       <div class="form-group">
         <label for="question">Question</label>
         <textarea id="question" class="form-control" rows="3"></textarea>
       </div>
 
-      <div class="form-group">
-        <label for="tags">Tags</label>
-        <div class="tags" id="tags">
-          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">anger</span><i class="fas fa-times"></i></button></div>
-          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">pride</span><i class="fas fa-times"></i></button></div>
-          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">greed</span><i class="fas fa-times"></i></button></div>
-          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">lust</span><i class="fas fa-times"></i></button></div>
-          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">envy</span><i class="fas fa-times"></i></button></div>
-          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">sloth</span><i class="fas fa-times"></i></button></div>
-          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">gluttony</span><i class="fas fa-times"></i></button></div>
-          <div class="tag"><button type="button" class="btn btn-light"><i class="fas fa-plus"></i></button></div>
-        </div>
-      </div>
+<!--      <div class="form-group">-->
+<!--        <label for="tags">Tags</label>-->
+<!--        <div class="tags" id="tags">-->
+<!--          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">anger</span><i class="fas fa-times"></i></button></div>-->
+<!--          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">pride</span><i class="fas fa-times"></i></button></div>-->
+<!--          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">greed</span><i class="fas fa-times"></i></button></div>-->
+<!--          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">lust</span><i class="fas fa-times"></i></button></div>-->
+<!--          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">envy</span><i class="fas fa-times"></i></button></div>-->
+<!--          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">sloth</span><i class="fas fa-times"></i></button></div>-->
+<!--          <div class="tag"><button type="button" class="btn btn-primary"><span class="tag-name">gluttony</span><i class="fas fa-times"></i></button></div>-->
+<!--          <div class="tag"><button type="button" class="btn btn-light"><i class="fas fa-plus"></i></button></div>-->
+<!--        </div>-->
+<!--      </div>-->
 
       <div class="form-group">
         <label for="type">Type</label>
         <select class="form-control" id="type">
-          <option selected>Single (radio)</option>
-          <option>Multi (checkbox)</option>
-          <option>Text (text)</option>
+          <option value="radio">Single (radio)</option>
+          <option value="check">Multi (checkbox)</option>
+          <option value="text">Text (text)</option>
         </select>
       </div>
 
@@ -81,8 +80,14 @@
         <input type="text" id="answer" class="form-control"/>
       </div>
 
-      <button type="submit" class="btn btn-success">Submit</button>
+      <div class="btn-answer-box"></div>
+
+      <div class="form-group variants"></div>
+
+      <div class="btn-variant-box"></div>
+      <button type="submit" class="btn btn-success">Create Question</button>
     </form>
+    <script src="../../../dist/main.js"></script>
   </div>
 </div>
 </body>

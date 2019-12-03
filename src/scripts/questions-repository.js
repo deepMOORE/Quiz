@@ -1,6 +1,6 @@
 const {toQuestionUserModel} = require('./utils/toQuestionUserModel');
 
-const rawQuestions = require('../fakedb/questions');
+const rawQuestions = require('../fakedb/db');
 
 export class QuestionsRepository {
     constructor() {
