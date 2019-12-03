@@ -1,4 +1,4 @@
-import {QuestionTypes} from './question-types';
+import {QuestionTypes} from './Enums/question-types';
 
 export class AnswerGenerator {
     generate(question) {

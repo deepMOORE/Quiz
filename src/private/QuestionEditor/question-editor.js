@@ -1,5 +1,5 @@
 import {FormViewer} from "./form-viewer";
-import {QuestionTypes} from "../scripts/question-types";
+import {QuestionTypes} from "../../scripts/Enums/question-types";
 
 let questionSelector = document.querySelector('select.form-control');
 

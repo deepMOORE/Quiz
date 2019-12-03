@@ -1,6 +1,6 @@
 import {FormGenerator} from "./form-generator";
-import {QuestionTypes} from "../scripts/question-types";
-import {ButtonTypes} from "./button-types";
+import {QuestionTypes} from "../../scripts/Enums/question-types";
+import {ButtonTypes} from "../../scripts/Enums/button-types";
 
 export class FormViewer {
     constructor() {
