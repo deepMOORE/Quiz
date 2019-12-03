@@ -9,7 +9,7 @@
       "nostrud"
     ],
     "type": "radio",
-    "created_at": "Fri Aug 22 2014 16:16:07 GMT+0000",
+    "created_at": "2017-04-12",
     "image": "http://someplacewithimages.it/32x32",
     "answer": "2",
     "variants": [
@@ -29,7 +29,7 @@
       "non"
     ],
     "type": "radio",
-    "created_at": "Sat Jul 29 2017 00:16:26 GMT+0000",
+    "created_at": "2017-04-12",
     "image": "http://someplacewithimages.it/32x32",
     "answer": "4",
     "variants": [
@@ -49,7 +49,7 @@
       "elit"
     ],
     "type": "radio",
-    "created_at": "Mon Mar 02 2015 20:12:39 GMT+0000",
+    "created_at": "2017-04-12",
     "image": "http://someplacewithimages.it/32x32",
     "answer": "Blue",
     "variants": [
@@ -69,7 +69,7 @@
       "voluptate"
     ],
     "type": "text",
-    "created_at": "Sat May 05 2018 08:58:16 GMT+0000",
+    "created_at": "2017-04-12",
     "image": "http://someplacewithimages.it/32x32",
     "answer": "Yes",
     "variants": null
@@ -84,7 +84,7 @@
       "et"
     ],
     "type": "text",
-    "created_at": "Thu Jan 17 2019 08:47:19 GMT+0000",
+    "created_at": "2017-04-12",
     "image": "http://someplacewithimages.it/32x32",
     "answer": "20",
     "variants": null
@@ -99,7 +99,7 @@
       "id"
     ],
     "type": "radio",
-    "created_at": "Sun Jan 05 2014 06:51:22 GMT+0000",
+    "created_at": "2017-04-12",
     "image": "http://someplacewithimages.it/32x32",
     "answer": "Eeeeenguler",
     "variants": [
@@ -120,7 +120,7 @@
       "tempor"
     ],
     "type": "check",
-    "created_at": "Sun Feb 28 2016 02:16:03 GMT+0000",
+    "created_at": "2017-04-12",
     "image": "http://someplacewithimages.it/32x32",
     "answer": [
       "Amazing",
@@ -143,7 +143,7 @@
       "cupidatat"
     ],
     "type": "radio",
-    "created_at": "Tue Jan 12 2016 14:11:10 GMT+0000",
+    "created_at": "2017-04-12",
     "image": "http://someplacewithimages.it/32x32",
     "answer": "Not yup not nope",
     "variants": [
@@ -163,7 +163,7 @@
       "minim"
     ],
     "type": "text",
-    "created_at": "Mon Jul 06 2015 23:43:32 GMT+0000",
+    "created_at": "2017-04-12",
     "image": "http://someplacewithimages.it/32x32",
     "answer": "Green",
     "variants": null
@@ -178,7 +178,7 @@
       "sint"
     ],
     "type": "text",
-    "created_at": "Tue Sep 04 2018 20:14:40 GMT+0000",
+    "created_at": "2017-04-12",
     "image": "http://someplacewithimages.it/32x32",
     "answer": "40",
     "variants": null

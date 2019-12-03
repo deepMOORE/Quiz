@@ -1,4 +1,4 @@
-import {QuestionsRepository} from '../scripts/questions-repository';
+import {QuestionsRepository} from '../scripts/Repositories/questions-repository';
 
 let questions = [
     {

@@ -1,4 +1,4 @@
-import {QuestionsRepository} from './questions-repository';
+import {QuestionsRepository} from './Repositories/questions-repository';
 import {AnswerGenerator} from './answer-generator';
 import {QuestionGenerator} from './question-generator';
 import {AnswerViewer} from "./answer-viewer";
