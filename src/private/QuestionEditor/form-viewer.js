@@ -13,18 +13,18 @@ export class FormViewer {
     }
 
     viewVariantInputField() {
-        let inputField = this.formGenerator.generateInputField();
+        let inputField = this.formGenerator.generateInputField('variant');
         this.variantBox.appendChild(inputField);
     }
 
     viewAnswerInputField() {
-        let inputField = this.formGenerator.generateInputField();
+        let inputField = this.formGenerator.generateInputField('answer');
         this.answerBox.appendChild(inputField);
     }
 
     resetInputFields() {
-        this.variantBox.innerHTML = this.formGenerator.generateDefaultInputGroup();
-        this.answerBox.innerHTML = this.formGenerator.generateDefaultInputGroup();
+        this.variantBox.innerHTML = this.formGenerator.generateDefaultInputGroup('variant');
+        this.answerBox.innerHTML = this.formGenerator.generateDefaultInputGroup('answer');
     }
 
     viewForm(viewType) {
