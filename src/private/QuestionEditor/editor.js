@@ -1,5 +1,5 @@
-import {FormViewer} from "./form-viewer";
-import {QuestionTypes} from "../../scripts/Enums/question-types";
+import {FormViewer} from './form-viewer';
+import {QuestionTypes} from '../../scripts/Enums/question-types';
 
 //todo: i work with DOM also in formViewer, think about SRP
 let questionSelector = document.querySelector('select.form-control');

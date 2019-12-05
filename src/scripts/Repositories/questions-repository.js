@@ -1,5 +1,5 @@
-const {toQuestionUserModel} = require('../utils/toQuestionUserModel');
-const {toQuestionAdminModel} = require('../utils/toQuestionAdminModel');
+import {toQuestionUserModel} from '../utils/toQuestionUserModel';
+import {toQuestionAdminModel} from '../utils/toQuestionAdminModel';
 
 // todo: this repository using also at admin panel, it's so bad
 export class QuestionsRepository {
@@ -10,10 +10,6 @@ export class QuestionsRepository {
 
     getQuestionUserModels() {
         return this.questions.map(toQuestionUserModel);
-    }
-
-    getQuestionsCount() {
-        return this.questions.length;
     }
 
     getQuestionAdminModels() {

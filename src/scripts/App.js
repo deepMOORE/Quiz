@@ -1,9 +1,9 @@
 import {QuestionsRepository} from './Repositories/questions-repository';
 import {AnswerGenerator} from './answer-generator';
 import {QuestionGenerator} from './question-generator';
-import {AnswerViewer} from "./answer-viewer";
-import {QuestionViewer} from "./question-viewer";
-import {AnswerService} from "./answer-service";
+import {AnswerViewer} from './answer-viewer';
+import {QuestionViewer} from './question-viewer';
+import {AnswerService} from './answer-service';
 
 /** @type {HTMLFormElement} */
 let form = document.querySelector('.quiz-form');
@@ -45,7 +45,7 @@ export function app() {
         }
 
         showNextQuestion(questions[questionIndex], questionIndex);
-    })
+    });
 }
 
 function showNextQuestion(question, index) {

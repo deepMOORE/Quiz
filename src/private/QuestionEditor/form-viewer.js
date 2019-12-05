@@ -1,4 +1,4 @@
-import {FormGenerator} from "./form-generator";
+import {FormGenerator} from './form-generator';
 import {QuestionTypes} from '../../scripts/Enums/question-types';
 
 export class FormViewer {

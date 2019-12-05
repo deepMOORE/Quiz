@@ -1,16 +1,16 @@
-import {QuestionTypes} from "./Enums/question-types";
+import {QuestionTypes} from './Enums/question-types';
 
 export class AnswerService {
     extractUserAnswers(form, questionType) {
         switch (questionType) {
             case QuestionTypes.CHECK:
-                return this._extractCheckboxValue(form.elements["answer"]);
+                return this._extractCheckboxValue(form.elements['answer']);
 
             case QuestionTypes.RADIO:
-                return this._extractRadioValues(form.elements["answer"]);
+                return this._extractRadioValues(form.elements['answer']);
 
             case QuestionTypes.TEXT:
-                return this._extractTextValue(form.elements["answer"]);
+                return this._extractTextValue(form.elements['answer']);
         }
     }
 

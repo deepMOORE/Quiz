@@ -1,4 +1,4 @@
-import {parseDateToFront} from "./parseDateToFront";
+import {parseDateToFront} from './parseDateToFront';
 
 export function toQuestionAdminModel(x) {
     return {
