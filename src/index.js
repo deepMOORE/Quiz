@@ -8,12 +8,12 @@ const body = document.body;
 // todo: MAKE DISPLAY : NONE
 switch (body.className) {
     case 'public-question':
-        const publicQuestion = app();
+        app();
         break;
     case 'admin-startup':
-        const showQuestions = start();
+        start();
         break;
     case 'add-question':
-        const addQuestion = edit();
+        edit();
         break;
 }
