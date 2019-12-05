@@ -1,16 +1,33 @@
 import {FormGenerator} from "./form-generator";
-import {QuestionTypes} from "../../scripts/Enums/question-types";
-import {ButtonTypes} from "../../scripts/Enums/button-types";
+import {QuestionTypes} from '../../scripts/Enums/question-types';
 
 export class FormViewer {
     constructor() {
         this.formGenerator = new FormGenerator();
-        this.variantBoxButton = document.querySelector('.btn-variant-box');
-        this.answerBoxButton = document.querySelector('.btn-answer-box');
-        this.variantInput = document.querySelector('.variants');
+
+        this.variantButton = document.querySelector('.btn-variant-box>button');
+        this.answerButton = document.querySelector('.btn-answer-box>button');
+        this.variantsFormGroup = document.querySelector('.variants');
+        this.variantBox = document.querySelector('.variants>label>div');
+        this.answerBox = document.querySelector('.answers>label>div');
     }
 
-    view(viewType) {
+    viewVariantInputField() {
+        let inputField = this.formGenerator.generateInputField();
+        this.variantBox.appendChild(inputField);
+    }
+
+    viewAnswerInputField() {
+        let inputField = this.formGenerator.generateInputField();
+        this.answerBox.appendChild(inputField);
+    }
+
+    resetInputFields() {
+        this.variantBox.innerHTML = this.formGenerator.generateDefaultInputGroup();
+        this.answerBox.innerHTML = this.formGenerator.generateDefaultInputGroup();
+    }
+
+    viewForm(viewType) {
         switch (viewType) {
             case QuestionTypes.RADIO :
                 return this._viewRadio();
@@ -24,45 +41,24 @@ export class FormViewer {
     }
 
     // todo: think about removing of code repetition
-    _viewRadio() {
-        if (this.answerBoxButton.innerHTML !== '') {
-            this.answerBoxButton.innerHTML = '';
-        }
-
-        if (this.variantBoxButton.innerHTML === '') {
-            this.variantBoxButton.innerHTML = this.formGenerator.generateButton(ButtonTypes.VARIANT);
-        }
-
-        if (this.variantInput.innerHTML === '') {
-            this.variantInput.innerHTML = this.formGenerator.generateVariantLabels();
-        }
+    _viewCheck() {
+        this.resetInputFields();
+        this._setDisplayFeatures('block', 'block', 'block');
     }
 
-    _viewCheck() {
-        if (this.answerBoxButton.innerHTML === '') {
-            this.answerBoxButton.innerHTML = this.formGenerator.generateButton(ButtonTypes.ANSWER);
-        }
-
-        if (this.variantBoxButton.innerHTML === '') {
-            this.variantBoxButton.innerHTML = this.formGenerator.generateButton(ButtonTypes.VARIANT);
-        }
-
-        if (this.variantInput.innerHTML === '') {
-            this.variantInput.innerHTML = this.formGenerator.generateVariantLabels();
-        }
+    _viewRadio() {
+        this.resetInputFields();
+        this._setDisplayFeatures('none', 'block', 'block');
     }
 
     _viewText() {
-        if (this.answerBoxButton.innerHTML !== '') {
-            this.answerBoxButton.innerHTML = '';
-        }
+        this.resetInputFields();
+        this._setDisplayFeatures('none', 'none', 'none')
+    }
 
-        if (this.variantBoxButton.innerHTML !== '') {
-            this.variantBoxButton.innerHTML = '';
-        }
-
-        if (this.variantInput.innerHTML !== '') {
-            this.variantInput.innerHTML = '';
-        }
+    _setDisplayFeatures(answerButton, variantButton, variantGroup) {
+        this.answerButton.style.display = answerButton;
+        this.variantButton.style.display = variantButton;
+        this.variantsFormGroup.style.display = variantGroup;
     }
 }

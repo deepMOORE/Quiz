@@ -16,8 +16,32 @@
   border-radius: 20px;
 }
 
-.add-variant-btn, .add-answer-btn {
+.form-group-label {
+  width: 100%;
+}
+
+.input-text {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.input-text-first {
+  width: 100%;
+}
+
+.label-heading {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.btn-block {
   margin-bottom: 20px;
+}
+
+.add-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 1655px){

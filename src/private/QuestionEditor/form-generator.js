@@ -1,19 +1,28 @@
 export class FormGenerator {
-    generateButton(type) {
-        return this._getAddButton(type);
+    generateInputField() {
+        return this._getInputField();
     }
 
-    // todo: must return array of label
-    generateVariantLabels() {
-        return this._getVariantLabels();
+    generateDefaultInputGroup() {
+        return this._getDefaultBox();
     }
 
-    _getAddButton(type) {
-        return `<button type="button" class="btn btn-primary btn-lg btn-block add-${type}-btn"><i class="fas fa-plus"></i></button>`
+    _getDefaultBox() {
+        return `
+            <div class="add-box">
+              <input type="text" class="form-control input-text-first answer"/>
+            </div>`;
     }
 
-    _getVariantLabels() {
-        return `<label for="variant">Variants</label>
-           <input type="text" id="variant" class="form-control"/>`;
+    _getInputField() {
+        let addBox = document.createElement('div');
+        addBox.className = 'add-box';
+        addBox.innerHTML = `
+              <input type="text" class="form-control input-text"/>
+              <button type="button" class="btn btn-danger">
+                <i class="fas fa-minus"></i>
+              </button>`;
+
+        return addBox;
     }
 }
