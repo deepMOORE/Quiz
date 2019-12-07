@@ -13,6 +13,11 @@ export class QuestionsRepository {
             .then((response) => response.json());
     }
 
+    getQuestionById(id) {
+        return fetch(`${this.apiUrl}${this.questions}${id}`)
+            .then((response) => response.json());
+    }
+
     add(question) {
         return fetch(`${this.apiUrl}${this.questions}`, {
             method: 'POST',

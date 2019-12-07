@@ -40,6 +40,36 @@ export class FormViewer {
         }
     }
 
+    // todo: i must choose about declaring selectors in the constructor, or in methods instead
+    fillForm(question) {
+        let text = document.querySelector('.form-group>textarea');
+        text.value = question.text;
+
+        let inputVariants = document.querySelectorAll('.variant');
+        let variantIndex = 0;
+        if (question.variants !== null) {
+            for (let inputVariant of inputVariants) {
+                inputVariant.value = question.variants[variantIndex];
+                variantIndex++;
+            }
+        }
+
+        let answerVariants = document.querySelectorAll('.answer');
+        let answerIndex = 0;
+        for (let answerVariant of answerVariants) {
+            answerVariant.value = question.answers[answerIndex];
+            answerIndex++;
+        }
+
+        let selector = document.querySelector('.form-group>select');
+        for (let i = 0; i < 3; i++) {
+            if (selector.options[i].value === question.type) {
+                selector.selectedIndex = i;
+                break;
+            }
+        }
+    }
+
     // todo: think about removing of code repetition
     _viewCheck() {
         this.resetInputFields();
@@ -53,7 +83,7 @@ export class FormViewer {
 
     _viewText() {
         this.resetInputFields();
-        this._setDisplayFeatures('none', 'none', 'none')
+        this._setDisplayFeatures('none', 'none', 'none');
     }
 
     _setDisplayFeatures(answerButton, variantButton, variantGroup) {

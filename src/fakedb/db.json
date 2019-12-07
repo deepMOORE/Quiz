@@ -1,169 +1,151 @@
 {
   "questions": [
     {
-      "id": 0,
-      "text": "How many legs cock has?",
-      "tags": [
-        "magna",
-        "sunt",
-        "ex",
-        "nostrud"
-      ],
-      "type": "radio",
-      "created_at": "2017-04-12",
-      "image": "http://someplacewithimages.it/32x32",
-      "answer": "2",
-      "variants": [
-        "4",
-        "2",
-        "Four",
-        "Potato"
-      ]
-    },
-    {
-      "id": 1,
-      "text": "How many legs crocodile has? ",
-      "tags": [
-        "et",
-        "quis",
-        "pariatur",
-        "non"
-      ],
-      "type": "radio",
-      "created_at": "2017-04-12",
-      "image": "http://someplacewithimages.it/32x32",
-      "answer": "4",
-      "variants": [
-        "December",
-        "11",
-        "Four",
-        "0"
-      ]
-    },
-    {
-      "id": 2,
-      "text": "What is sky's color?",
-      "tags": [
-        "minim",
-        "est",
-        "id",
-        "elit"
-      ],
-      "type": "radio",
-      "created_at": "2017-04-12",
-      "image": "http://someplacewithimages.it/32x32",
-      "answer": "Blue",
-      "variants": [
-        "Yellow",
-        "Blue",
-        "52",
-        "Paper"
-      ]
-    },
-    {
-      "id": 4,
-      "text": "How many fingers human has?",
-      "tags": [
-        "nisi",
-        "id",
-        "anim",
-        "et"
-      ],
-      "type": "text",
-      "created_at": "2017-04-12",
-      "image": "http://someplacewithimages.it/32x32",
-      "answer": "20",
-      "variants": null
-    },
-    {
-      "id": 5,
-      "text": "Say Angular.",
-      "tags": [
-        "velit",
-        "commodo",
-        "elit",
-        "id"
-      ],
-      "type": "radio",
-      "created_at": "2017-04-12",
-      "image": "http://someplacewithimages.it/32x32",
-      "answer": "Eeeeenguler",
-      "variants": [
-        "Angulyar",
-        "Anugular",
-        "Anigilator",
-        "Annigilator",
-        "Angular"
-      ]
-    },
-    {
-      "id": 9,
-      "text": "There is only check question?",
-      "tags": [
-        "eu",
-        "aliqua",
-        "consequat",
-        "tempor"
-      ],
+      "text": "How many fingers you have?",
       "type": "check",
-      "created_at": "2017-04-12",
-      "image": "http://someplacewithimages.it/32x32",
-      "answer": [
-        "Amazing",
-        "Wow"
-      ],
       "variants": [
-        "Amazing",
-        "Wow",
-        "Incredible",
-        "And?."
-      ]
-    },
-    {
-      "id": 7,
-      "text": "What is crocodile color?",
-      "tags": [
-        "laboris",
-        "quis",
-        "cupidatat",
-        "minim"
-      ],
-      "type": "text",
-      "created_at": "2017-04-12",
-      "image": "http://someplacewithimages.it/32x32",
-      "answer": "Green",
-      "variants": null
-    },
-    {
-      "id": 8,
-      "text": "How many legs sorokonozhka has?",
-      "tags": [
-        "dolore",
-        "consequat",
-        "non",
-        "sint"
-      ],
-      "type": "text",
-      "created_at": "2017-04-12",
-      "image": "http://someplacewithimages.it/32x32",
-      "answer": "40",
-      "variants": null
-    },
-    {
-      "text": "This is first question!",
-      "type": "radio",
-      "variants": [
-        "wow",
-        "incredible",
-        "you are bad boi",
-        "fuckin awesome",
-        "Ahuet"
+        "four",
+        "20",
+        "two",
+        "banana",
+        "twenty"
       ],
       "answers": [
-        "Ahuet"
+        "twenty",
+        "20"
       ],
-      "created_at": "2019-12-07T18:09:17.551Z",
+      "created_at": "2019-12-07T22:17:00.723Z",
+      "id": 1
+    },
+    {
+      "text": "What is crocodile color?",
+      "type": "radio",
+      "variants": [
+        "banana",
+        "nanana",
+        "red",
+        "green"
+      ],
+      "answers": [
+        "green"
+      ],
+      "created_at": "2019-12-07T22:17:46.083Z",
+      "id": 2
+    },
+    {
+      "text": "How many legs cock has?",
+      "type": "radio",
+      "variants": [
+        "2",
+        "4",
+        "7",
+        "apple"
+      ],
+      "answers": [
+        "2"
+      ],
+      "created_at": "2019-12-07T22:19:02.149Z",
+      "id": 3
+    },
+    {
+      "text": "qweqwe",
+      "type": "radio",
+      "variants": [
+        "ee",
+        "ww",
+        "qq"
+      ],
+      "answers": [
+        "ee"
+      ],
+      "created_at": "2019-12-07T22:19:51.502Z",
+      "id": 5
+    },
+    {
+      "text": "Ff",
+      "type": "radio",
+      "variants": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answers": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "created_at": "2019-12-07T22:21:56.531Z",
+      "id": 8
+    },
+    {
+      "text": "Ff",
+      "type": "radio",
+      "variants": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "created_at": "2019-12-07T22:32:12.331Z",
+      "id": 9
+    },
+    {
+      "text": "yyUU",
+      "type": "radio",
+      "variants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answers": [
+        "8"
+      ],
+      "created_at": "2019-12-07T22:32:29.067Z",
       "id": 10
+    },
+    {
+      "text": "Last checkobx!",
+      "type": "check",
+      "variants": [
+        "Awesome",
+        "Ahuet",
+        "and?"
+      ],
+      "answers": [
+        "wow",
+        "incredible"
+      ],
+      "created_at": "2019-12-07T22:47:14.142Z",
+      "id": 11
+    },
+    {
+      "text": "Last text",
+      "type": "text",
+      "variants": null,
+      "answers": [
+        "wwwwww"
+      ],
+      "created_at": "2019-12-07T22:50:10.229Z",
+      "id": 12
+    },
+    {
+      "text": "Say Angular!",
+      "type": "text",
+      "variants": null,
+      "answers": [
+        "Angulary!"
+      ],
+      "created_at": "2019-12-07T22:50:26.581Z",
+      "id": 13
     }
   ]
 }

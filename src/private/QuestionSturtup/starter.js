@@ -14,6 +14,7 @@ export function start() {
 
             // todo: create confirm window
             let deleteButtons = document.querySelectorAll('tbody>tr>.edit-buttons>button.btn.btn-danger');
+            let editButtons = document.querySelectorAll('tbody>tr>.edit-buttons>button.btn.btn-light');
 
             deleteButtons.forEach(function (x) {
                 x.addEventListener('click', function (event) {
@@ -21,6 +22,13 @@ export function start() {
                     questionRepository.removeById(x.dataset.id).then(
                         () => location.href = '../../views/private/admin-welcome.html'
                     );
+                });
+            });
+
+            editButtons.forEach(function (x) {
+                x.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    location.href = '../../views/private/add-question.html?id=' + x.dataset.id;
                 });
             });
         }

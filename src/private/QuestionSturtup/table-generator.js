@@ -1,18 +1,6 @@
-import {QuestionsRepository} from "../../scripts/DBContext/questions-repository";
-
 export class TableGenerator {
-    constructor() {
-        this.questionsRepository = new QuestionsRepository();
-    }
-
     generateRow(index, question) {
         return this._getRow(index, question.id, question.text, question.type, question.createdAt);
-    }
-
-    _removeById(id) {
-        this.questionsRepository.removeById(id).then(
-            () => location.href = '../../views/private/admin-welcome.html'
-        );
     }
 
     _getRow(index, id, text, type, createdAt) {

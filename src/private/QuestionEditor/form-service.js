@@ -2,8 +2,6 @@ export class FormService {
     constructor() {
         this.questionText = document.querySelector('.form-group>textarea');
         this.questionType = document.querySelector('.form-group>select');
-        // this.variants = document.querySelectorAll('.variant');
-        // this.answers = document.querySelectorAll('.answer');
     }
 
     extractForm() {
@@ -32,6 +30,10 @@ export class FormService {
         for (let variant of variants) {
             let value = variant.value;
             result.push(value);
+        }
+
+        if (result.length === 1 && result[0] === '') {
+            return null;
         }
 
         return result;
