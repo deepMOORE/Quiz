@@ -10,12 +10,15 @@ Build the scss files by `build` and use `dev` further for watch mode:
 npm run dev:css
 npm run build:css
 ```
-Build js files by webpack just by
+Build js files by webpack just by:
 ```
-webpack
+npm run prod
 ```
-You can use php server `127.0.0.1:8080` or `lite-server` instead.
+Api server is provided as a fake json server, start it with:
 ```
-npm run php-server
+npm run db
+```
+You should use `lite-server`.
+```
 npm run lite-server
 ```

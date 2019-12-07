@@ -20,13 +20,12 @@
   },
   "scripts": {
     "test": "node test.js",
-    "php-server": "php -S 127.0.0.1:8080",
     "lite-server": "lite-server",
-    "start": "node src/index.js",
     "dev:css": "sass --watch src/styles/scss/style.scss:src/styles/scss/style.css",
     "build:css": "sass src/styles/scss/style.scss:src/styles/scss/style.css",
-    "build": "webpack --devtool source-map",
+    "build:js": "webpack --devtool source-map",
     "dev": "npx webpack --watch --devtool source-map",
+    "prod": "npx webpack",
     "db": "json-server --watch src/fakedb/db.json --port 3004"
   },
   "repository": {
