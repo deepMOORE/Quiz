@@ -4,6 +4,7 @@ import {QuestionGenerator} from './question-generator';
 import {AnswerViewer} from './answer-viewer';
 import {QuestionViewer} from './question-viewer';
 import {AnswerService} from './answer-service';
+import {toQuestionUserModel} from './utils/toQuestionUserModel';
 
 /** @type {HTMLFormElement} */
 let form = document.querySelector('.quiz-form');
@@ -16,36 +17,40 @@ const questionRepository = new QuestionsRepository();
 const answerService = new AnswerService();
 
 export function app() {
-    let questions = questionRepository.getQuestionUserModels();
+    questionRepository.getQuestions().then(
+        (rawQuestions) => {
+            let questions = rawQuestions.map(toQuestionUserModel);
+            let questionIndex = 0;
+            showNextQuestion(questions[0], 0);
 
-    let questionIndex = 0;
-    showNextQuestion(questions[0], 0);
-    form.querySelector('.buttons>.submit-button').addEventListener('click', function (event) {
-        event.preventDefault();
+            form.querySelector('.buttons>.submit-button').addEventListener('click', function (event) {
+                event.preventDefault();
 
-        let currentUserAnswers = answerService.extractUserAnswers(form, questions[questionIndex].type);
-        questions[questionIndex].userAnswers = [];
-        questions[questionIndex].userAnswers.push(...currentUserAnswers);
+                let currentUserAnswers = answerService.extractUserAnswers(form, questions[questionIndex].type);
+                questions[questionIndex].userAnswers = [];
+                questions[questionIndex].userAnswers.push(...currentUserAnswers);
 
-        questionIndex++;
+                questionIndex++;
 
-        showNextQuestion(questions[questionIndex], questionIndex);
-    });
+                showNextQuestion(questions[questionIndex], questionIndex);
+            });
 
-    form.querySelector('.buttons>.back-button').addEventListener('click', function (event) {
-        event.preventDefault();
+            form.querySelector('.buttons>.back-button').addEventListener('click', function (event) {
+                event.preventDefault();
 
-        let currentUserAnswers = answerService.extractUserAnswers(form, questions[questionIndex].type);
-        questions[questionIndex].userAnswers = [];
-        questions[questionIndex].userAnswers.push(...currentUserAnswers);
+                let currentUserAnswers = answerService.extractUserAnswers(form, questions[questionIndex].type);
+                questions[questionIndex].userAnswers = [];
+                questions[questionIndex].userAnswers.push(...currentUserAnswers);
 
-        questionIndex--;
-        if (questionIndex < 0) {
-            questionIndex = 0;
+                questionIndex--;
+                if (questionIndex < 0) {
+                    questionIndex = 0;
+                }
+
+                showNextQuestion(questions[questionIndex], questionIndex);
+            });
         }
-
-        showNextQuestion(questions[questionIndex], questionIndex);
-    });
+    );
 }
 
 function showNextQuestion(question, index) {

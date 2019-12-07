@@ -3,13 +3,18 @@ import {toQuestionAdminModel} from '../utils/toQuestionAdminModel';
 
 // todo: this repository using also at admin panel, it's so bad
 export class QuestionsRepository {
-    constructor() {
-        /** @type {Array} */
-        this.questions = require('../../fakedb/db');
+    get apiUrl() {
+        return 'http://localhost:3004/';
     }
 
-    getQuestionUserModels() {
-        return this.questions.map(toQuestionUserModel);
+    constructor() {
+        this.questions = fetch(`${this.apiUrl}${'questions/'}`)
+            .then((response) => response.json());
+    }
+
+    getQuestions() {
+        return fetch(`${this.apiUrl}questions`)
+            .then((response) => response.json());
     }
 
     getQuestionAdminModels() {
