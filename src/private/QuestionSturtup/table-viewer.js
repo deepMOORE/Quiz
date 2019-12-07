@@ -11,7 +11,7 @@ export class TableViewer {
         let index = 1;
 
         for (let question of questions) {
-            questionColumnHTML += this.tableGenerator.generateColumn(index, question);
+            questionColumnHTML += this.tableGenerator.generateRow(index, question);
             index++;
         }
 

@@ -1,20 +1,32 @@
+import {QuestionsRepository} from "../../scripts/DBContext/questions-repository";
+
 export class TableGenerator {
-    generateColumn(index, question) {
-        return this._getColumn(index, question.text, question.type, question.createdAt)
+    constructor() {
+        this.questionsRepository = new QuestionsRepository();
     }
 
-    _getColumn(index, text, type, createdAt) {
-        return `<tr>
+    generateRow(index, question) {
+        return this._getRow(index, question.id, question.text, question.type, question.createdAt);
+    }
+
+    _removeById(id) {
+        this.questionsRepository.removeById(id).then(
+            () => location.href = '../../views/private/admin-welcome.html'
+        );
+    }
+
+    _getRow(index, id, text, type, createdAt) {
+        return `<tr">
         <th scope="row">${index}</th>
         <td>${text}</td>
         <td>${type}</td>
         <td><span>${createdAt}</span></td>
-        <td>
-          <a href="" class="btn btn-light">
+        <td class="edit-buttons">
+          <button type="button" class="btn btn-light" data-id="${id}">
             <i class="fas fa-pencil-alt"></i>
-          </a>
+          </button>
 
-          <button type="button" class="btn btn-danger">
+          <button type="button" class="btn btn-danger" data-id="${id}">
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>

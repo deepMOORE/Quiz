@@ -61,21 +61,6 @@
       ]
     },
     {
-      "id": 3,
-      "text": "Untrasleted question?",
-      "tags": [
-        "sunt",
-        "proident",
-        "deserunt",
-        "voluptate"
-      ],
-      "type": "text",
-      "created_at": "2017-04-12",
-      "image": "http://someplacewithimages.it/32x32",
-      "answer": "Yes",
-      "variants": null
-    },
-    {
       "id": 4,
       "text": "How many fingers human has?",
       "tags": [
@@ -135,26 +120,6 @@
       ]
     },
     {
-      "id": 6,
-      "text": "Is 1 prime?",
-      "tags": [
-        "amet",
-        "cillum",
-        "consectetur",
-        "cupidatat"
-      ],
-      "type": "radio",
-      "created_at": "2017-04-12",
-      "image": "http://someplacewithimages.it/32x32",
-      "answer": "Not yup not nope",
-      "variants": [
-        "Yup",
-        "Nope",
-        "Both nope and yup",
-        "Not yup not nope"
-      ]
-    },
-    {
       "id": 7,
       "text": "What is crocodile color?",
       "tags": [
@@ -199,18 +164,6 @@
       ],
       "created_at": "2019-12-07T18:09:17.551Z",
       "id": 10
-    },
-    {
-      "text": "Heh that is the second!",
-      "type": "text",
-      "variants": [
-        ""
-      ],
-      "answers": [
-        "Good"
-      ],
-      "created_at": "2019-12-07T18:31:30.376Z",
-      "id": 11
     }
   ]
 }
