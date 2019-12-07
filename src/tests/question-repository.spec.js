@@ -1,4 +1,4 @@
-import {QuestionsRepository} from '../scripts/Repositories/questions-repository';
+import {QuestionsRepository} from '../scripts/DBContext/questions-repository';
 
 let questions = [
     {

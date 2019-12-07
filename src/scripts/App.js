@@ -1,4 +1,4 @@
-import {QuestionsRepository} from './Repositories/questions-repository';
+import {QuestionsRepository} from './DBContext/questions-repository';
 import {AnswerGenerator} from './answer-generator';
 import {QuestionGenerator} from './question-generator';
 import {AnswerViewer} from './answer-viewer';
@@ -17,7 +17,7 @@ const questionRepository = new QuestionsRepository();
 const answerService = new AnswerService();
 
 export function app() {
-    questionRepository.getQuestions().then(
+    questionRepository.getAll().then(
         (rawQuestions) => {
             let questions = rawQuestions.map(toQuestionUserModel);
             let questionIndex = 0;
