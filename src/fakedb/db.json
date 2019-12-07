@@ -183,6 +183,34 @@
       "image": "http://someplacewithimages.it/32x32",
       "answer": "40",
       "variants": null
+    },
+    {
+      "text": "This is first question!",
+      "type": "radio",
+      "variants": [
+        "wow",
+        "incredible",
+        "you are bad boi",
+        "fuckin awesome",
+        "Ahuet"
+      ],
+      "answers": [
+        "Ahuet"
+      ],
+      "created_at": "2019-12-07T18:09:17.551Z",
+      "id": 10
+    },
+    {
+      "text": "Heh that is the second!",
+      "type": "text",
+      "variants": [
+        ""
+      ],
+      "answers": [
+        "Good"
+      ],
+      "created_at": "2019-12-07T18:31:30.376Z",
+      "id": 11
     }
   ]
 }

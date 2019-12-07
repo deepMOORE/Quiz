@@ -1,15 +1,7 @@
-import {toQuestionUserModel} from '../utils/toQuestionUserModel';
-import {toQuestionAdminModel} from '../utils/toQuestionAdminModel';
-
-// todo: this repository using also at admin panel, it's so bad
+// todo: this repository using also in admin panel, it's so bad
 export class QuestionsRepository {
     get apiUrl() {
         return 'http://localhost:3004/';
-    }
-
-    constructor() {
-        this.questions = fetch(`${this.apiUrl}${'questions/'}`)
-            .then((response) => response.json());
     }
 
     getQuestions() {
@@ -17,7 +9,13 @@ export class QuestionsRepository {
             .then((response) => response.json());
     }
 
-    getQuestionAdminModels() {
-        return this.questions.map(toQuestionAdminModel);
+    addQuestion(body) {
+        return fetch(`${this.apiUrl}questions`, {
+            method: 'POST',
+            body: JSON.stringify(body),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
     }
 }

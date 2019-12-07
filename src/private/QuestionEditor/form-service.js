@@ -12,7 +12,7 @@ export class FormService {
             type : this._getType(),
             variants: this._getVariants(),
             answers: this._getAnswers(),
-            createdAt: new Date()
+            created_at: new Date()
         };
     }
 

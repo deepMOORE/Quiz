@@ -1,6 +1,7 @@
 import {FormViewer} from './form-viewer';
 import {QuestionTypes} from '../../scripts/Enums/question-types';
 import {FormService} from './form-service';
+import {QuestionsRepository} from '../../scripts/Repositories/questions-repository';
 
 //todo: i work with DOM also in formViewer, think about SRP
 let questionSelector = document.querySelector('select.form-control');
@@ -11,6 +12,7 @@ let submitQuestion = document.querySelector('.modal-footer>.btn-success');
 // let removeInputFieldButton = document.querySelector('.btn-variant-box>.btn');
 const formViewer = new FormViewer();
 const formService = new FormService();
+const questionRepository = new QuestionsRepository();
 
 export function edit() {
     formViewer.viewForm(QuestionTypes.RADIO);
@@ -35,7 +37,9 @@ export function edit() {
     submitQuestion.addEventListener('click', function (event) {
         event.preventDefault();
 
-        console.info(formService.extractForm());
-        location.href = '../../views/private/admin-welcome.html';
+        let readyToInsertQuestion = formService.extractForm();
+        questionRepository.addQuestion(readyToInsertQuestion).then(
+            () => location.href = '../../views/private/admin-welcome.html'
+        );
     });
 }
