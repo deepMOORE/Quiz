@@ -8,6 +8,7 @@ let questionSelector = document.querySelector('select.form-control');
 let addAnswerButton = document.querySelector('.btn-answer-box>.btn');
 let addVariantButton = document.querySelector('.btn-variant-box>.btn');
 let submitQuestion = document.querySelector('.modal-footer>.btn-success');
+let backButton = document.querySelector('.back-btn');
 const formViewer = new FormViewer();
 const formService = new FormService();
 const questionRepository = new QuestionsRepository();
@@ -53,6 +54,12 @@ export function edit() {
         event.preventDefault();
 
         formViewer.viewVariantInputField();
+    });
+
+    backButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        location.href = '../../views/private/admin-welcome.html';
     });
 
     submitQuestion.addEventListener('click', function (event) {

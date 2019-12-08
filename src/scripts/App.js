@@ -20,6 +20,7 @@ export function app() {
     questionRepository.getAll().then(
         (rawQuestions) => {
             let questions = rawQuestions.map(toQuestionUserModel);
+            let questionCount = questions.length;
             let questionIndex = 0;
             showNextQuestion(questions[0], 0);
 
@@ -31,6 +32,9 @@ export function app() {
                 questions[questionIndex].userAnswers.push(...currentUserAnswers);
 
                 questionIndex++;
+                if (questionIndex === questionCount) {
+                    questionIndex--;
+                }
 
                 showNextQuestion(questions[questionIndex], questionIndex);
             });
