@@ -66,16 +66,6 @@
       "id": 13
     },
     {
-      "text": "Matfak pizdak!",
-      "type": "text",
-      "variants": null,
-      "answers": [
-        "da"
-      ],
-      "created_at": "2019-12-09T21:40:41.358Z",
-      "id": 14
-    },
-    {
       "text": "That is is a norm question now",
       "type": "radio",
       "variants": [
@@ -106,16 +96,6 @@
       "id": 16
     },
     {
-      "text": "TEXT2",
-      "type": "text",
-      "variants": null,
-      "answers": [
-        "qwe"
-      ],
-      "created_at": "2019-12-10T19:20:36.782Z",
-      "id": 18
-    },
-    {
       "text": "text3333",
       "type": "check",
       "variants": [
@@ -132,20 +112,6 @@
       ],
       "created_at": "2019-12-10T19:36:07.447Z",
       "id": 19
-    },
-    {
-      "text": "eee",
-      "type": "radio",
-      "variants": [
-        "qwe",
-        "y",
-        "t"
-      ],
-      "answers": [
-        "t"
-      ],
-      "created_at": "2019-12-10T19:48:05.654Z",
-      "id": 20
     }
   ]
 }

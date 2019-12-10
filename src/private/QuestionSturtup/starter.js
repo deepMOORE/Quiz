@@ -13,24 +13,28 @@ export function start() {
 
             tableViewer.view(questions);
 
-            // todo: create confirm window
-            let deleteButtons = document.querySelectorAll('tbody>tr>.edit-buttons>button.btn.btn-danger');
             let editButtons = document.querySelectorAll('tbody>tr>.edit-buttons>button.btn.btn-light');
-
-            deleteButtons.forEach(function (x) {
-                x.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    questionRepository.removeById(x.dataset.id).then(
-                        () => location.href = '../../views/private/admin-welcome.html'
-                    );
-                });
-            });
 
             editButtons.forEach(function (x) {
                 x.addEventListener('click', function (event) {
                     event.preventDefault();
                     location.href = '../../views/private/add-question.html?id=' + x.dataset.id;
                 });
+            });
+
+            $('.confirm-delete').click(function () {
+                let id = $('.append-deletion').data('id');
+
+                questionRepository.removeById(id).then(
+                    () => location.href = '../../views/private/admin-welcome.html'
+                );
+            });
+
+            $('.deletion').on('click', function(event) {
+                event.preventDefault();
+
+                let id = $(this).data('id');
+                $('.append-deletion').data('id', id).modal('show');
             });
 
             //todo: make all over admin page button

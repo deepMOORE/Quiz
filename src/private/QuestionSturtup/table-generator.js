@@ -14,7 +14,7 @@ export class TableGenerator {
             <i class="fas fa-pencil-alt"></i>
           </button>
 
-          <button type="button" class="btn btn-danger" data-id="${id}">
+          <button type="button" class="btn btn-danger deletion" data-id="${id}">
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>
