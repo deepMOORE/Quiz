@@ -7,6 +7,14 @@ export class FormGenerator {
         return this._getDefaultBox(inputType);
     }
 
+    generateErrorMessage(message) {
+        return this._getErrorMessage(message);
+    }
+
+    _getErrorMessage(message) {
+        return `<i class="fas fa-exclamation"></i> ${message} <i class="fas fa-exclamation"></i>`;
+    }
+
     _getDefaultBox(inputType) {
         return `
             <div class="add-box">

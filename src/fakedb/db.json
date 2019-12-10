@@ -1,23 +1,6 @@
 {
   "questions": [
     {
-      "text": "How many fingers you have?",
-      "type": "check",
-      "variants": [
-        "four",
-        "20",
-        "two",
-        "banana",
-        "twenty"
-      ],
-      "answers": [
-        "twenty",
-        "20"
-      ],
-      "created_at": "2019-12-07T22:17:00.723Z",
-      "id": 1
-    },
-    {
       "text": "What is crocodile color?",
       "type": "radio",
       "variants": [
@@ -46,52 +29,6 @@
       ],
       "created_at": "2019-12-07T22:19:02.149Z",
       "id": 3
-    },
-    {
-      "text": "qweqwe",
-      "type": "radio",
-      "variants": [
-        "ee",
-        "ww",
-        "qq"
-      ],
-      "answers": [
-        "ee"
-      ],
-      "created_at": "2019-12-07T22:19:51.502Z",
-      "id": 5
-    },
-    {
-      "text": "Ff",
-      "type": "radio",
-      "variants": [
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
-      "answers": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "created_at": "2019-12-07T22:21:56.531Z",
-      "id": 8
-    },
-    {
-      "text": "yyUU",
-      "type": "radio",
-      "variants": [
-        "1",
-        "2",
-        "3"
-      ],
-      "answers": [
-        "8"
-      ],
-      "created_at": "2019-12-07T22:32:29.067Z",
-      "id": 10
     },
     {
       "text": "Last checkobx!",
@@ -127,6 +64,88 @@
       ],
       "created_at": "2019-12-07T22:50:26.581Z",
       "id": 13
+    },
+    {
+      "text": "Matfak pizdak!",
+      "type": "text",
+      "variants": null,
+      "answers": [
+        "da"
+      ],
+      "created_at": "2019-12-09T21:40:41.358Z",
+      "id": 14
+    },
+    {
+      "text": "That is is a norm question now",
+      "type": "radio",
+      "variants": [
+        "ww",
+        "ee",
+        "ee",
+        "good"
+      ],
+      "answers": [
+        "good"
+      ],
+      "created_at": "2019-12-09T21:42:51.870Z",
+      "id": 15
+    },
+    {
+      "text": "text",
+      "type": "radio",
+      "variants": [
+        "u",
+        "t",
+        "l",
+        "a"
+      ],
+      "answers": [
+        "a"
+      ],
+      "created_at": "2019-12-10T19:17:57.483Z",
+      "id": 16
+    },
+    {
+      "text": "TEXT2",
+      "type": "text",
+      "variants": null,
+      "answers": [
+        "qwe"
+      ],
+      "created_at": "2019-12-10T19:20:36.782Z",
+      "id": 18
+    },
+    {
+      "text": "text3333",
+      "type": "check",
+      "variants": [
+        "qwe",
+        "wer",
+        "ert",
+        "rty",
+        "tyu"
+      ],
+      "answers": [
+        "qwe",
+        "wer",
+        "ert"
+      ],
+      "created_at": "2019-12-10T19:36:07.447Z",
+      "id": 19
+    },
+    {
+      "text": "eee",
+      "type": "radio",
+      "variants": [
+        "qwe",
+        "y",
+        "t"
+      ],
+      "answers": [
+        "t"
+      ],
+      "created_at": "2019-12-10T19:48:05.654Z",
+      "id": 20
     }
   ]
 }

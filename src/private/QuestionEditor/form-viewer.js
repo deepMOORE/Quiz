@@ -2,14 +2,26 @@ import {FormGenerator} from './form-generator';
 import {QuestionTypes} from '../../scripts/Enums/question-types';
 
 export class FormViewer {
+    get EmptyInnerHTML() {
+        return '';
+    }
+
     constructor() {
         this.formGenerator = new FormGenerator();
-
+        this.errorMessageField = document.querySelector('.error-text');
         this.variantButton = document.querySelector('.btn-variant-box>button');
         this.answerButton = document.querySelector('.btn-answer-box>button');
         this.variantsFormGroup = document.querySelector('.variants');
         this.variantBox = document.querySelector('.variants>label>div');
         this.answerBox = document.querySelector('.answers>label>div');
+    }
+
+    clearErrorMessage() {
+        this.errorMessageField.innerHTML = this.EmptyInnerHTML;
+    }
+
+    viewErrorMessage(message) {
+        this.errorMessageField.innerHTML = this.formGenerator.generateErrorMessage(message);
     }
 
     viewVariantInputField() {
@@ -87,6 +99,7 @@ export class FormViewer {
     }
 
     _setDisplayFeatures(answerButton, variantButton, variantGroup) {
+        this.errorMessageField.innerHTML = this.EmptyInnerHTML;
         this.answerButton.style.display = answerButton;
         this.variantButton.style.display = variantButton;
         this.variantsFormGroup.style.display = variantGroup;

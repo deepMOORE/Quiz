@@ -7,8 +7,10 @@ import {QuestionsRepository} from '../../scripts/DBContext/questions-repository'
 let questionSelector = document.querySelector('select.form-control');
 let addAnswerButton = document.querySelector('.btn-answer-box>.btn');
 let addVariantButton = document.querySelector('.btn-variant-box>.btn');
-let submitQuestion = document.querySelector('.modal-footer>.btn-success');
+let formGroup = document.querySelectorAll('.form-group');
+let submitQuestion = document.querySelector('.btn-success');
 let backButton = document.querySelector('.back-btn');
+let logoutButton = document.querySelector('nav>.btn-danger');
 const formViewer = new FormViewer();
 const formService = new FormService();
 const questionRepository = new QuestionsRepository();
@@ -39,6 +41,14 @@ export function edit() {
         );
     }
 
+    formGroup.forEach(function (x) {
+        x.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            formViewer.clearErrorMessage();
+        });
+    });
+
     questionSelector.addEventListener('change', function(event) {
         event.preventDefault();
         formViewer.viewForm(questionSelector.value);
@@ -62,14 +72,29 @@ export function edit() {
         location.href = '../../views/private/admin-welcome.html';
     });
 
+    logoutButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        location.href = '../../../index.html';
+    });
+
     submitQuestion.addEventListener('click', function (event) {
         event.preventDefault();
 
-        questionRepository.removeById(questionForEditionId).then();
+        if (questionForEditionId !== null) {
+            questionRepository.removeById(questionForEditionId).then();
+        }
 
-        let readyToInsertQuestion = formService.extractForm();
-        questionRepository.add(readyToInsertQuestion).then(
-            () => location.href = '../../views/private/admin-welcome.html'
-        );
+        let errorMessage = formService.validateForm();
+
+        if (errorMessage === null) {
+            let readyToInsertQuestion = formService.extractForm();
+
+            questionRepository.add(readyToInsertQuestion).then(
+                () => location.href = '../../views/private/admin-welcome.html'
+            );
+        } else {
+            formViewer.viewErrorMessage(errorMessage);
+        }
     });
 }
