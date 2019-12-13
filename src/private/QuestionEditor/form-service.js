@@ -1,20 +1,39 @@
 import {ValidateErrorMessage} from '../../scripts/Enums/validate-error-message';
-import {QuestionTypes} from "../../scripts/Enums/question-types";
+import {QuestionTypes} from '../../scripts/Enums/question-types';
 
 export class FormService {
     get EmptyInput() {
         return '';
     }
 
-    constructor() {
-        this.questionText = document.querySelector('.form-group>textarea');
-        this.questionType = document.querySelector('.form-group>select');
+    get FirstInputAnswer() {
+        return document.querySelector('.answer');
+    }
+
+    get FirstInputVariant() {
+        return document.querySelector('.variant');
+    }
+
+    get InputAnswers() {
+        return document.querySelectorAll('.answer');
+    }
+
+    get InputVariants() {
+        return document.querySelectorAll('.variant');
+    }
+
+    get QuestionSelector() {
+        return document.querySelector('.form-group>select');
+    }
+
+    get QuestionTextarea() {
+        return document.querySelector('.form-group>textarea');
     }
 
     extractForm() {
         return {
             text : this._getText(),
-            type : this._getType(),
+            type : this._getQuestionType(),
             variants: this._getVariants(),
             answers: this._getAnswers(),
             created_at: new Date()
@@ -22,7 +41,7 @@ export class FormService {
     }
 
     validateForm() {
-        let questionType = this._getType();
+        let questionType = this._getQuestionType();
 
         switch (questionType) {
             case QuestionTypes.RADIO :
@@ -99,16 +118,16 @@ export class FormService {
     }
 
     _isAtLeastOneAnswerExist() {
-        return document.querySelector('.answer').value !== this.EmptyInput;
+        return this.FirstInputAnswer.value !== this.EmptyInput;
     }
 
     _isAtLeastOneVariantExist() {
-        return document.querySelector('.variant').value !== this.EmptyInput;
+        return this.FirstInputVariant.value !== this.EmptyInput;
     }
 
     _isVariantsContainAnswers() {
-        let answers = document.querySelectorAll('.answer');
-        let variants = document.querySelectorAll('.variant');
+        let answers = this.InputAnswers;
+        let variants = this.InputVariants;
 
         for (let answer of answers) {
             let isVariantsContainCurrentAnswer = false;
@@ -128,6 +147,7 @@ export class FormService {
 
 
     _isInputFieldRepeated(inputClassName) {
+        //todo remove selector declaration somewhere
         let input = document.querySelectorAll(`.${inputClassName}`);
 
         let answerTexts = [];
@@ -146,17 +166,17 @@ export class FormService {
     }
 
     _getText() {
-        return this.questionText.value;
+        return this.QuestionTextarea.value;
     }
 
-    _getType() {
-        return this.questionType.options[this.questionType.selectedIndex].value;
+    _getQuestionType() {
+        return this.QuestionSelector.options[this.QuestionSelector.selectedIndex].value;
     }
 
     _getVariants() {
         let result = [];
 
-        let variants = document.querySelectorAll('.variant');
+        let variants = this.InputVariants;
         for (let variant of variants) {
             let value = variant.value;
             result.push(value);
@@ -172,7 +192,7 @@ export class FormService {
     _getAnswers() {
         let result = [];
 
-        let answers = document.querySelectorAll('.answer');
+        let answers = this.InputAnswers;
         for (let answer of answers) {
             let value = answer.value;
             result.push(value);

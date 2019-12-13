@@ -6,37 +6,71 @@ export class FormViewer {
         return '';
     }
 
+    get InputAnswers() {
+        return document.querySelectorAll('.answer');
+    }
+
+    get InputVariants() {
+        return document.querySelectorAll('.variant');
+    }
+
+    get FormTextarea() {
+        return document.querySelector('.form-group>textarea');
+    }
+
+    get QuestionTypeSelector() {
+        return document.querySelector('.form-group>select');
+    }
+
+    get ErrorMessageSpan() {
+        return document.querySelector('.error-text');
+    }
+
+    get AddVariantButton() {
+        return document.querySelector('.btn-variant-box>button');
+    }
+
+    get AddAnswerButton() {
+        return document.querySelector('.btn-answer-box>button');
+    }
+
+    get FormGroupVariants() {
+        return document.querySelector('.variants');
+    }
+
+    get VariantElement() {
+        return document.querySelector('.variants>label>div');
+    }
+
+    get AnswerElement() {
+        return document.querySelector('.answers>label>div');
+    }
+
     constructor() {
         this.formGenerator = new FormGenerator();
-        this.errorMessageField = document.querySelector('.error-text');
-        this.variantButton = document.querySelector('.btn-variant-box>button');
-        this.answerButton = document.querySelector('.btn-answer-box>button');
-        this.variantsFormGroup = document.querySelector('.variants');
-        this.variantBox = document.querySelector('.variants>label>div');
-        this.answerBox = document.querySelector('.answers>label>div');
     }
 
     clearErrorMessage() {
-        this.errorMessageField.innerHTML = this.EmptyInnerHTML;
+        this.ErrorMessageSpan.innerHTML = this.EmptyInnerHTML;
     }
 
     viewErrorMessage(message) {
-        this.errorMessageField.innerHTML = this.formGenerator.generateErrorMessage(message);
+        this.ErrorMessageSpan.innerHTML = this.formGenerator.generateErrorMessage(message);
     }
 
     viewVariantInputField() {
         let inputField = this.formGenerator.generateInputField('variant');
-        this.variantBox.appendChild(inputField);
+        this.VariantElement.appendChild(inputField);
     }
 
     viewAnswerInputField() {
         let inputField = this.formGenerator.generateInputField('answer');
-        this.answerBox.appendChild(inputField);
+        this.AnswerElement.appendChild(inputField);
     }
 
     resetInputFields() {
-        this.variantBox.innerHTML = this.formGenerator.generateDefaultInputGroup('variant');
-        this.answerBox.innerHTML = this.formGenerator.generateDefaultInputGroup('answer');
+        this.VariantElement.innerHTML = this.formGenerator.generateDefaultInputGroup('variant');
+        this.AnswerElement.innerHTML = this.formGenerator.generateDefaultInputGroup('answer');
     }
 
     viewForm(viewType) {
@@ -52,37 +86,50 @@ export class FormViewer {
         }
     }
 
-    // todo: i must choose about declaring selectors in the constructor, or in methods instead
     fillForm(question) {
-        let text = document.querySelector('.form-group>textarea');
-        text.value = question.text;
+        this._fillQuestionText(question.text);
 
-        let inputVariants = document.querySelectorAll('.variant');
-        let variantIndex = 0;
+        this._fillAnswers(question.answers);
+
         if (question.variants !== null) {
-            for (let inputVariant of inputVariants) {
-                inputVariant.value = question.variants[variantIndex];
-                variantIndex++;
-            }
+            this._fillVariants(question.variants);
         }
 
-        let answerVariants = document.querySelectorAll('.answer');
+        this._fillSelector(question.type);
+    }
+
+    _fillQuestionText(text) {
+        this.FormTextarea.value = text;
+    }
+
+    _fillAnswers(answers) {
+        let answerVariants = this.InputAnswers;
         let answerIndex = 0;
         for (let answerVariant of answerVariants) {
-            answerVariant.value = question.answers[answerIndex];
+            answerVariant.value = answers[answerIndex];
             answerIndex++;
         }
+    }
 
-        let selector = document.querySelector('.form-group>select');
+    _fillVariants(variants) {
+        let inputVariants = this.InputVariants;
+        let variantIndex = 0;
+        for (let inputVariant of inputVariants) {
+            inputVariant.value = variants[variantIndex];
+            variantIndex++;
+        }
+    }
+
+    _fillSelector(questionType) {
+        let selector = this.QuestionTypeSelector;
         for (let i = 0; i < 3; i++) {
-            if (selector.options[i].value === question.type) {
+            if (selector.options[i].value === questionType) {
                 selector.selectedIndex = i;
                 break;
             }
         }
     }
 
-    // todo: think about removing of code repetition
     _viewCheck() {
         this.resetInputFields();
         this._setDisplayFeatures('block', 'block', 'block');
@@ -98,10 +145,10 @@ export class FormViewer {
         this._setDisplayFeatures('none', 'none', 'none');
     }
 
-    _setDisplayFeatures(answerButton, variantButton, variantGroup) {
-        this.errorMessageField.innerHTML = this.EmptyInnerHTML;
-        this.answerButton.style.display = answerButton;
-        this.variantButton.style.display = variantButton;
-        this.variantsFormGroup.style.display = variantGroup;
+    _setDisplayFeatures(answerView, variantView, variantGroupView) {
+        this.ErrorMessageSpan.innerHTML = this.EmptyInnerHTML;
+        this.AddAnswerButton.style.display = answerView;
+        this.AddVariantButton.style.display = variantView;
+        this.FormGroupVariants.style.display = variantGroupView;
     }
 }
