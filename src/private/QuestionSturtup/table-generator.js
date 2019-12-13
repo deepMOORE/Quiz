@@ -6,7 +6,7 @@ export class TableGenerator {
     _getRow(index, id, text, type, createdAt) {
         return `<tr">
         <th scope="row">${index}</th>
-        <td>${text}</td>
+        <td class="table-question-text">${text}</td>
         <td>${type}</td>
         <td><span>${createdAt}</span></td>
         <td class="edit-buttons">
