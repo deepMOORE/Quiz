@@ -29,11 +29,13 @@ export function edit() {
                 if (question.variants !== null) {
                     for (let i = 0; i < question.variants.length - 1; i++) {
                         formViewer.viewVariantInputField();
+                        formViewer.addDeletionEventOnLastField('variants');
                     }
                 }
 
                 for (let i = 0; i < question.answers.length - 1; i++) {
                     formViewer.viewAnswerInputField();
+                    formViewer.addDeletionEventOnLastField('answers');
                 }
 
                 formViewer.fillForm(question);
@@ -58,12 +60,14 @@ export function edit() {
         event.preventDefault();
 
         formViewer.viewAnswerInputField();
+        formViewer.addDeletionEventOnLastField('answers');
     });
 
     addVariantButton.addEventListener('click', function(event) {
         event.preventDefault();
 
         formViewer.viewVariantInputField();
+        formViewer.addDeletionEventOnLastField('variants');
     });
 
     backButton.addEventListener('click', function(event) {

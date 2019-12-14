@@ -130,6 +130,27 @@ export class FormViewer {
         }
     }
 
+    addDeletionEventOnLastField(fieldName) {
+        let lastAddBox = document.querySelector(`div.form-group.${fieldName}>label>div`).lastChild;
+        let lastDeleteButton = lastAddBox.querySelector('.btn');
+        // todo: так то я должен переместить из в get, как сам и придумал, но иде ругается, и я не знаю где должен
+        //  быть этот метод
+        let answerInputFields = document.querySelector('body>div>div>form>div.form-group.answers>label>div');
+        let variantInputFields = document.querySelector('body>div>div>form>div.form-group.variants>label>div');
+
+        lastDeleteButton.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            //todo: Вот сейчас серьезно, это ненормально же, оно не должно работать, ведь на веб-странице же существует
+            // евент вне заисимости от функции, мне кажется это полная дичь
+            if (fieldName === 'answers') {
+                answerInputFields.removeChild(lastAddBox);
+            } else if (fieldName === 'variants') {
+                variantInputFields.removeChild(lastAddBox);
+            }
+        });
+    }
+
     _viewCheck() {
         this.resetInputFields();
         this._setDisplayFeatures('block', 'block', 'block');
