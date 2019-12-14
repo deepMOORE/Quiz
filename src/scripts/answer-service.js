@@ -17,9 +17,15 @@ export class AnswerService {
     _extractCheckboxValue(checkElements) {
         let result = [];
 
-        for (let element of checkElements) {
-            if (element.checked) {
-                result.push(element.dataset.value);
+        try {
+            for (let element of checkElements) {
+                if (element.checked) {
+                    result.push(element.dataset.value);
+                }
+            }
+        } catch (e) {
+            if (e instanceof TypeError) {
+                result.push(checkElements.dataset.value);
             }
         }
 
@@ -27,9 +33,17 @@ export class AnswerService {
     }
 
     _extractRadioValues(checkElements) {
-        for (let element of checkElements) {
-            if (element.checked) {
-                return [element.dataset.value];
+        try {
+            for (let element of checkElements) {
+                if (element.checked) {
+                    return [element.dataset.value];
+                }
+            }
+        } catch (e) {
+            if (e instanceof TypeError) {
+                if (checkElements.checked) {
+                    return [checkElements.dataset.value];
+                }
             }
         }
 

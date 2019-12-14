@@ -1,21 +1,6 @@
 {
   "questions": [
     {
-      "text": "What is crocodile color?",
-      "type": "radio",
-      "variants": [
-        "banana",
-        "nanana",
-        "red",
-        "green"
-      ],
-      "answers": [
-        "green"
-      ],
-      "created_at": "2019-12-07T22:17:46.083Z",
-      "id": 2
-    },
-    {
       "text": "How many legs cock has?",
       "type": "radio",
       "variants": [
@@ -44,21 +29,6 @@
       ],
       "created_at": "2019-12-07T22:47:14.142Z",
       "id": 11
-    },
-    {
-      "text": "That is is a norm question now",
-      "type": "radio",
-      "variants": [
-        "ww",
-        "ee",
-        "ee",
-        "good"
-      ],
-      "answers": [
-        "good"
-      ],
-      "created_at": "2019-12-09T21:42:51.870Z",
-      "id": 15
     },
     {
       "text": "when i finish it?",
@@ -128,6 +98,75 @@
       ],
       "created_at": "2019-12-14T00:04:06.983Z",
       "id": 23
+    },
+    {
+      "text": "What is crocodile color?",
+      "type": "radio",
+      "variants": [
+        "banana",
+        "red",
+        "green"
+      ],
+      "answers": [
+        "green"
+      ],
+      "created_at": "2019-12-14T00:09:57.053Z",
+      "id": 24
+    },
+    {
+      "text": "Устал",
+      "type": "text",
+      "variants": null,
+      "answers": [
+        "Я устал"
+      ],
+      "created_at": "2019-12-14T00:13:29.516Z",
+      "id": 25
+    },
+    {
+      "text": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "type": "check",
+      "variants": [
+        "666",
+        "222",
+        "!!!",
+        ",,,"
+      ],
+      "answers": [
+        "!!!",
+        ",,,"
+      ],
+      "created_at": "2019-12-14T00:14:42.812Z",
+      "id": 26
+    },
+    {
+      "text": "qweqweqwe",
+      "type": "radio",
+      "variants": [
+        "qwe",
+        "",
+        "sdfg"
+      ],
+      "answers": [
+        "qwe"
+      ],
+      "created_at": "2019-12-14T11:30:42.180Z",
+      "id": 27
+    },
+    {
+      "text": "That is is a norm question now",
+      "type": "radio",
+      "variants": [
+        "ww",
+        "цццццц",
+        "ee",
+        "good"
+      ],
+      "answers": [
+        "good"
+      ],
+      "created_at": "2019-12-14T11:38:13.891Z",
+      "id": 28
     }
   ]
 }
