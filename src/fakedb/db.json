@@ -169,6 +169,22 @@
       ],
       "created_at": "2019-12-14T12:18:45.597Z",
       "id": 30
+    },
+    {
+      "text": "qwe",
+      "type": "check",
+      "variants": [
+        "qwe",
+        "i",
+        "iii",
+        "a"
+      ],
+      "answers": [
+        "qwe",
+        "a"
+      ],
+      "created_at": "2019-12-14T12:20:39.748Z",
+      "id": 31
     }
   ]
 }
