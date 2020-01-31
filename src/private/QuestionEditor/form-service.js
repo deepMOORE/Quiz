@@ -147,7 +147,6 @@ export class FormService {
 
 
     _isInputFieldRepeated(inputClassName) {
-        //todo remove selector declaration somewhere
         let input = document.querySelectorAll(`.${inputClassName}`);
 
         let answerTexts = [];
@@ -158,7 +157,6 @@ export class FormService {
         return this._isArrayHasDuplicateValues(answerTexts);
     }
 
-    // https://stackoverflow.com/questions/49215358/checking-for-duplicate-strings-in-javascript-array/49215411
     _isArrayHasDuplicateValues(array) {
         let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) !== index);
 

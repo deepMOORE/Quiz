@@ -37,7 +37,6 @@ export function start() {
                 $('.append-deletion').data('id', id).modal('show');
             });
 
-            //todo: make all over admin page button
             logoutButton.addEventListener('click', function(event) {
                 event.preventDefault();
 
