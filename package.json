@@ -9,7 +9,7 @@
   "dependencies": {
     "jasmine-console-reporter": "^3.1.0",
     "node-php": "^0.0.1",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {
     "eslint": "^6.7.1",
